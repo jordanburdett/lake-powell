@@ -1,5 +1,6 @@
-drop user_profile;
-drop dates;
+
+drop TABLE dates;
+drop TABLE user_profile;
 
 CREATE TABLE user_profile (
     id SERIAL NOT NULL PRIMARY KEY,
@@ -21,10 +22,25 @@ CREATE TABLE dates (
 );
 
 
-INSERT INTO user_profile VALUES (0, 'jordanburdett', 'password', 'jordan', 'burdett');
-INSERT INTO user_profile VALUES (1, 'amberparr', 'password', 'amber', 'parr');
+INSERT INTO user_profile (username, password, first_name, last_name) VALUES ('jordan', 'password', 'jordan', 'burdett');
+INSERT INTO user_profile (username, password, first_name, last_name) VALUES ('amber', 'password', 'amber', 'parr');
+INSERT INTO user_profile (username, password, first_name, last_name) VALUES ('troy', 'password', 'troy', 'burdett');
+INSERT INTO user_profile (username, password, first_name, last_name) VALUES ('larry', 'password', 'larry', 'burdett');
 
-INSERT INTO dates VALUES (0, 0, 7, 8, 29, 5, 2019, 2019);
+
+INSERT INTO dates (user_id, month_start, month_end, day_start, day_end, year_start, year_end) 
+VALUES (1, 7, 8, 29, 5, 2019, 2019);
+INSERT INTO dates (user_id, month_start, month_end, day_start, day_end, year_start, year_end) 
+VALUES (1, 8, 8, 10, 15, 2019, 2019);
+INSERT INTO dates (user_id, month_start, month_end, day_start, day_end, year_start, year_end) 
+VALUES (1, 8, 8, 20, 25, 2019, 2019);
+
+INSERT INTO dates (user_id, month_start, month_end, day_start, day_end, year_start, year_end) 
+VALUES (2, 7, 7, 25, 29, 2019, 2019);
+INSERT INTO dates (user_id, month_start, month_end, day_start, day_end, year_start, year_end) 
+VALUES (2, 8, 8, 5, 10, 2019, 2019);
+INSERT INTO dates (user_id, month_start, month_end, day_start, day_end, year_start, year_end) 
+VALUES (2, 7, 7, 15, 20, 2019, 2019);
 
 
 
@@ -34,3 +50,7 @@ SELECT * from dates;
 
 SELECT * from dates
 where user_id = 0;
+
+SELECT * FROM user_profile AS u
+JOIN dates AS n
+ON u.id = n.user_id;
