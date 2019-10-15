@@ -1,7 +1,7 @@
 .display-4 {
     text-align: center;
     font-size: 1.4em;
-    margin:none;
+    margin-bottom :none;
 }
 
 .header {
@@ -12,5 +12,5 @@
 }
 .navbar navbar-expand-sm bg-light {
     background-color: #949494;
-    margin:none;
+    margin-bottom: none;
 }
