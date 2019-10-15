@@ -1,4 +1,4 @@
 <?php 
 session_start();
-include_once("web/home.php");
+include_once("home.php");
 ?>
