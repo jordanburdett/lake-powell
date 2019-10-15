@@ -68,8 +68,8 @@ catch (PDOException $ex)
                     JOIN dates AS n
                     ON u.id = n.user_id') as $row) { 
                         echo '<p>' . $row['first_name'] . " date: " 
-                        . $row['month_start'] . ", " . $row['day_start'] . "," . $row['year_start']
-                        . " - " . $row['month_end'] . ", " . $row['day_end'] . "," . $row['year_end']
+                        . $row['month_start'] . ", " . $row['day_start'] . ", " . $row['year_start']
+                        . " - " . $row['month_end'] . ", " . $row['day_end'] . ", " . $row['year_end']
                         . "</p>";
                     }
             ?>
