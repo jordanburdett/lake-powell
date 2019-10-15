@@ -11,3 +11,7 @@
     border-radius: .3rem;
     padding-bottom: 0px;
 }
+
+.float {
+    position: absolute;
+}
