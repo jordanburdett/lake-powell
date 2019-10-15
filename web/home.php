@@ -28,10 +28,10 @@ session_start();
 
             <ul class= "navbar-nav">
             <li class="nav-item">
-                <a class="nav-link" href="#">Link 1</a>
+                <a class="nav-link" href="web/home.php">Home</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Link 2</a>
+                <a class="nav-link" href="web/info.php">Info</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">Link 3</a>
