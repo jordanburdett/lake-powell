@@ -67,7 +67,7 @@ catch (PDOException $ex)
                 foreach($db->query('SELECT first_name, month_start, month_end, day_start, day_end, year_start, year_end FROM user_profile AS u
                     JOIN dates AS n
                     ON u.id = n.user_id') as $row) { 
-                        echo '<p>' . $row['first_name'] . " date: " 
+                        echo '<p>' . $row['first_name'] . "'s date: " 
                         . $row['month_start'] . ", " . $row['day_start'] . ", " . $row['year_start']
                         . " - " . $row['month_end'] . ", " . $row['day_end'] . ", " . $row['year_end']
                         . "</p>";
