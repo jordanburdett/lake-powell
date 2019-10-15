@@ -21,6 +21,23 @@ session_start();
         <h1 class="display-4">
             Lake Powell
         </h1>
+
+        <nav class="navbar navbar-expand-sm bg-light">
+
+            <!-- bootstrap navbar -->
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link 1</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link 2</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link 3</a>
+                </li>
+            </ul>
+
+        </nav>
     </div>
 
     <script src="javascript.js"></script>
