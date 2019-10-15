@@ -1,6 +1,7 @@
 .display-4 {
     text-align: center;
     font-size: 1.4em;
+    margin:none;
 }
 
 .header {
