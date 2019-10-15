@@ -22,7 +22,7 @@ session_start();
             Lake Powell
         </h1>
 
-        <nav class="navbar navbar-expand-sm bg-light">
+        <nav class="navbar navbar-expand-sm bg-light" id="navbar">
 
             <!-- bootstrap navbar -->
             <ul class="navbar-nav">
