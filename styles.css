@@ -12,6 +12,9 @@
     padding-bottom: 0px;
 }
 
-.float {
+.login {
     position: absolute;
+    top: 20px;
+    right: 20px;
+    
 }

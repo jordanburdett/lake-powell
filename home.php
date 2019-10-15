@@ -42,7 +42,7 @@ session_start();
         </nav>
     </div>
 
-    <div class="float">
+    <div class="login">
         <div class="card">
             <div class="card-body">
                 <h4 class="card-title">Card title</h4>
