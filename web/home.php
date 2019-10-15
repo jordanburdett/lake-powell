@@ -21,8 +21,9 @@ session_start();
         <h1 class="display-4">
             Lake Powell
         </h1>
+    </div>
 
-        <nav class="navbar navbar-expand-sm bg-light">
+    <nav class="navbar navbar-expand-sm bg-light">
 
             <!-- bootstrap navbar -->
             <ul class="navbar-nav">
@@ -38,7 +39,6 @@ session_start();
             </ul>
 
         </nav>
-    </div>
 
     <script src="javascript.js"></script>
 </body>
