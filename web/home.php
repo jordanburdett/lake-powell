@@ -18,7 +18,7 @@ session_start();
 <body>
 
     <div class="jumbotron">
-        <h1 class="display-4" style="text-align:center;">
+        <h1 class="display-4">
             Lake Powell
         </h1>
     </div>
