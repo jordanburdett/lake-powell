@@ -7,7 +7,7 @@
 .header {
     padding: 2rem 1rem;
     margin-bottom: none;
-    background-color: #e9ecef;
+    background-image: "headerImage.jpg";
     border-radius: .3rem;
     padding-bottom: 0px;
 }
@@ -18,3 +18,5 @@
     right: 20px;
     
 }
+
+
