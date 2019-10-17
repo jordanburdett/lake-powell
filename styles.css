@@ -7,22 +7,24 @@
 .header {
     padding: 2rem 1rem;
     margin-bottom: none;
+    color: white;
+    border-radius: .3rem;
+    padding-bottom: 0px;
+}
+
+.bg {
     background-image: url("headerImage.jpg");
     height: 100%;
     width: 50%;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    color: white;
-    border-radius: .3rem;
-    padding-bottom: 0px;
 }
 
 .login {
     position: absolute;
     top: 20px;
     right: 20px;
-    
 }
 
 

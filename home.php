@@ -18,28 +18,29 @@ session_start();
 </head>
 
 <body>
+    <div class="bg">
+        <div class="header">
+            <h1 class="display-4">
+                Lake Powell
+            </h1>
 
-    <div class="header">
-        <h1 class="display-4">
-            Lake Powell
-        </h1>
+            <nav class="navbar navbar-expand-sm navbar-transparent">
+                <!-- bootstrap navbar -->
 
-        <nav class="navbar navbar-expand-sm navbar-transparent">
-            <!-- bootstrap navbar -->
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="home.php">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="info.php">Info</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link 3</a>
+                    </li>
+                </ul>
 
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="home.php">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="info.php">Info</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Link 3</a>
-                </li>
-            </ul>
-
-        </nav>
+            </nav>
+        </div>
     </div>
 
 
