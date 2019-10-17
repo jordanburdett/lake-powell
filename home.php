@@ -18,8 +18,8 @@ session_start();
 </head>
 
 <body>
-    <div class="bg">
-        <div class="header">
+    <div class="header">
+        <div class="bg">
             <h1 class="display-4">
                 Lake Powell
             </h1>
