@@ -8,7 +8,8 @@
     padding: 2rem 1rem;
     margin-bottom: none;
     background-image: url("headerImage.jpg");
-    height: 50%;
+    height: 100%;
+    width: 50%;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
