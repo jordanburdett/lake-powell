@@ -1,13 +1,10 @@
 <?php
 session_start();
-$loggedIn = false;
 
-$_SESSION['username'] = "jordan";
-$_SESSION['password'] = "password";
-$firstName = "Jordan";
-$lastName = "Burdett";
-
-if ($_SESSION['username'] || $_SESSION['password']) {
+if ($_SESSION['loggedIn'] != null) {
+    $loggedIn = true;
+}
+else {
     $loggedIn = false;
 }
 
@@ -39,7 +36,7 @@ if ($_SESSION['username'] || $_SESSION['password']) {
 
             <?php
             if ($loggedIn) {
-                echo "<div class='shadow p-4 mb-4 bg-white'><p class='loggedIn' style='text-align:left; padding-left 5%;'>Welcome $firstName $lastName</p></div>";
+                echo "<p class='loggedIn' style='text-align:left; padding-left 5%;'>Welcome $firstName $lastName</p>";
             } else {
                 echo "<a href='login.php' class='btn btn-primary' id='login_here'>Login Here</a>";
             }
@@ -57,12 +54,20 @@ if ($_SESSION['username'] || $_SESSION['password']) {
                 <li class="nav-item">
                     <a class="nav-link active" href="home.php">Home</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="info.php">Info</a>
+
+                <?php
+
+                if ($loggedIn) {
+
+                    echo "
+                <li class='nav-item'>
+                    <a class='nav-link' href='info.php'>Info</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Link 3</a>
-                </li>
+                <li class='nav-item'>
+                    <a class='nav-link' href='#'>Link 3</a>
+                </li>";
+                }
+                ?>
             </ul>
 
             <div class="row">
