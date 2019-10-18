@@ -47,12 +47,12 @@ catch (PDOException $ex)
 
             <!-- bootstrap navbar -->
 
-            <ul class="navbar-nav">
+            <ul class="nav nav-pills nav-justified">
                 <li class="nav-item">
                     <a class="nav-link" href="home.php">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="info.php">Info</a>
+                    <a class="nav-link active" href="info.php">Info</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Link 3</a>

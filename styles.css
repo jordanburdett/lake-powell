@@ -1,7 +1,43 @@
-.display-4 {
+.headerText, .headerSmall {
     text-align: center;
-    font-size: 1.4em;
-    margin-bottom: 0px;
+    font-size: 3em;
+    text-shadow: 2px 2px rgb(92, 92, 92);
+    margin: 2%;
+    font-family: "Courier New", Courier, monospace;
+}
+
+.loggedIn {
+    text-align: left;
+    font-size: 1.5em;
+    padding-left: 20%;
+    color: black;
+    text-shadow: 1px 1px rgb(48, 46, 46);
+}
+
+@media only screen and (max-width: 900px) {
+    .loggedIn {
+        padding-left: 0%;
+    }
+    #loginBox {
+        display: none;
+    }
+    
+}
+
+@media only screen and (min-width: 900px) {
+    #login_here {
+        display: none;
+    }
+    #loginBox {
+        display: block;
+    }
+}
+
+
+
+.smallHeader {
+    text-align: center;
+    padding-top: 5%;
 }
 
 .header {
@@ -10,19 +46,22 @@
     color: white;
     border-radius: .3rem;
     padding-bottom: 0px;
-    width: 100%;
+    
+}
+
+.headerSmall {
+    font-size: 1em;
+    margin: 1%;
 }
 
 .bg {
     background-image: url("headerImage.jpg");
-    height: 100%;
-    width: 50%;
+    background-color: whitesmoke;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
 }
 
-.login {
+.loginBox {
     position: absolute;
     top: 20px;
     right: 20px;
