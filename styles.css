@@ -9,31 +9,9 @@
 .loggedIn {
     text-align: left;
     font-size: 1.5em;
-    padding-left: 20%;
     color: black;
     text-shadow: 1px 1px rgb(48, 46, 46);
 }
-
-@media only screen and (max-width: 900px) {
-    .loggedIn {
-        padding-left: 0%;
-    }
-    #loginBox {
-        display: none;
-    }
-    
-}
-
-@media only screen and (min-width: 900px) {
-    #login_here {
-        display: none;
-    }
-    #loginBox {
-        display: block;
-    }
-}
-
-
 
 .smallHeader {
     text-align: center;
@@ -61,10 +39,16 @@
     background-repeat: no-repeat;
 }
 
-.loginBox {
-    position: absolute;
-    top: 20px;
-    right: 20px;
+@media only screen and (max-width: 900px) {
+    
 }
 
-
+.col {
+    border: solid black;
+}
+.row {
+    border: solid blue;
+}
+.container {
+    width: 100%;
+}

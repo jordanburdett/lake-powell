@@ -39,32 +39,15 @@ if ($_SESSION['username'] || $_SESSION['password']) {
 
             <?php
             if ($loggedIn) {
-                echo "<p class='loggedIn' style='text-align:left; padding-left 5%;'>Welcome $firstName $lastName</p>";
+                echo "<div class='shadow p-4 mb-4 bg-white'><p class='loggedIn' style='text-align:left; padding-left 5%;'>Welcome $firstName $lastName</p></div>";
             } else {
-                echo "<a href='login.php' id='login_here'><p class='loggedIn'>Login Here</p>";
+                echo "<a href='login.php' class='btn btn-primary' id='login_here'>Login Here</a>";
             }
             ?>
 
 
         </div>
     </div>
-
-    <?php
-    if (!$loggedIn) {
-
-        echo "
-    <div class='loginBox' id='loginBox'>
-        <div class='shadow p-4 mb-4 bg-white'>
-            <div class='card'>
-                <div class='card-body'>
-                    <h4 class='card-title'>Login</h4>
-                    <p class='card-text'>Some example text. Some example text.</p>
-                </div>
-            </div>
-        </div>
-    </div>";
-    }
-    ?>
 
     <div class="shadow p-4 mb-4 bg-white">
         <div class="container">
@@ -93,10 +76,18 @@ if ($_SESSION['username'] || $_SESSION['password']) {
         </div>
     </div>
 
+    <div class="shadow p-4 mb-4 bg-whitesmoke">
+        <div class="container">
+            <div class="display-4" style="text-align:center;">
+                Pictures
+            </div>
+        </div>
+    </div>
+
     <div class="shadow p-4 mb-4 bg-white">
         <div class="container-fluid" style="background-color='whitesmoke; padding-top: 50px;">
 
-            <p>Created by Jordan Burdett - jordan@burdett.us - 801-725-5109</p>
+            <p style="text-align:center;">Created by Jordan Burdett - jordan@burdett.us - 801-725-5109</p>
         </div>
     </div>
 
