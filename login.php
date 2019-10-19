@@ -46,6 +46,25 @@ if ($first_name == "") {
     </li>
     </ul>";
     echo "invalid login";
+    echo "<div class='row'>
+    <div class='col'>
+        <h2 class='smallHeader'>Login</h2>
+
+        <form name='loginForm' id='loginForm'>
+            <div class='form-group'>
+                <label for='username'>Username:</label>
+                <input type='txt' class='form-control' id='username' name='username'>
+            </div>
+            <div class='form-group'>
+                <label for='password'>Password:</label>
+                <input type='password' name='password' class='form-control' id='password'>
+            </div>
+
+            <button type='button' class='btn btn-primary' onclick='login()'>Login</button>
+        </form>
+    </div>
+
+</div>";
 }
 else
 {
