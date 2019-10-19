@@ -61,7 +61,7 @@ else
         <a class='nav-link' href='#'>Link 3</a>
     </li>
     </ul>";
-    echo '<p>' . $first_name . ' ' . $last_name . ' you are now logged in</p>';
+    echo '<h4>Welcome ' . $first_name . ' ' . $last_name . ' you are now logged in</h4>';
     
 
     $_SESSION['loggedIn'] = true;

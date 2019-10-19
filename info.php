@@ -1,25 +1,28 @@
 <?php
 session_start();
-try
-{
-  $dbUrl = getenv('DATABASE_URL');
+try {
+    $dbUrl = getenv('DATABASE_URL');
 
-  $dbOpts = parse_url($dbUrl);
+    $dbOpts = parse_url($dbUrl);
 
-  $dbHost = $dbOpts["host"];
-  $dbPort = $dbOpts["port"];
-  $dbUser = $dbOpts["user"];
-  $dbPassword = $dbOpts["pass"];
-  $dbName = ltrim($dbOpts["path"],'/');
+    $dbHost = $dbOpts["host"];
+    $dbPort = $dbOpts["port"];
+    $dbUser = $dbOpts["user"];
+    $dbPassword = $dbOpts["pass"];
+    $dbName = ltrim($dbOpts["path"], '/');
 
-  $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
+    $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
 
-  $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+} catch (PDOException $ex) {
+    echo 'Error!: ' . $ex->getMessage();
+    die();
 }
-catch (PDOException $ex)
-{
-  echo 'Error!: ' . $ex->getMessage();
-  die();
+
+
+if (!$_SESSION['loggedIn']) {
+    echo "You do not have access";
+    die("you don't have access");
 }
 ?>
 
@@ -44,47 +47,36 @@ catch (PDOException $ex)
         </h1>
 
         <div class="shadow p-4 mb-4 bg-white">
-        <div class="container">
+            <div class="container">
 
-            <!-- bootstrap navbar -->
-            <ul class="nav nav-tabs nav-justified">
-                <li class="nav-item">
-                    <a class="nav-link" href="home.php">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" href="info.php">Info</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Link 3</a>
-                </li>
-            </ul>
+                <!-- bootstrap navbar -->
+                <ul class="nav nav-tabs nav-justified">
+                    <li class="nav-item">
+                        <a class="nav-link" href="home.php">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="info.php">Info</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link 3</a>
+                    </li>
+                </ul>
 
-            <div class="row">
-                <div class="col">
-                    <h2 class="smallHeader">col1</h2>
-                </div>
-                <div class="col">
-                    <h2 class="smallHeader">col2</h2>
-                </div>
-            </div>
-        </div>
-
-        <div class="shadow p-4 mb-4 bg-white">
-            <?php
-                foreach($db->query('SELECT first_name, month_start, month_end, day_start, day_end, year_start, year_end FROM user_profile AS u
+                <?php
+                foreach ($db->query('SELECT first_name, month_start, month_end, day_start, day_end, year_start, year_end FROM user_profile AS u
                     JOIN dates AS n
-                    ON u.id = n.user_id') as $row) { 
-                        echo '<p>' . $row['first_name'] . "'s date: " 
+                    ON u.id = n.user_id') as $row) {
+                    echo '<p>' . $row['first_name'] . "'s date: "
                         . $row['month_start'] . ", " . $row['day_start'] . ", " . $row['year_start']
                         . " - " . $row['month_end'] . ", " . $row['day_end'] . ", " . $row['year_end']
                         . "</p>";
-                    }
-            ?>
+                }
+                ?>
+            </div>
         </div>
     </div>
-    </div>
 
-    
+
     <script src="javascript.js"></script>
 </body>
 
