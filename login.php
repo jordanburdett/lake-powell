@@ -46,5 +46,9 @@ else
 {
     echo '<p>' . $first_name . '</p>';
     echo '<p>' . $last_name . '</p>';
+
+    $_SESSION['loggedIn'] = true;
+    $_SESSION['first_name'] = $first_name;
+    $_SESSION['last_name'] = $last_name;
 }
 ?>

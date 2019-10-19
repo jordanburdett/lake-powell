@@ -1,8 +1,8 @@
 <?php
 session_start();
 
-if ($_SESSION['loggedIn'] != null) {
-    $loggedIn = true;
+if ($_SESSION['loggedIn']) {
+    echo "You're already logged in silly";
 } else {
     $loggedIn = false;
 }

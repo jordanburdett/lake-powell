@@ -1,10 +1,15 @@
 <?php
 session_start();
 
+$loggedIn = false;
+$firstName = "";
+$lastName = "";
+
 if ($_SESSION['loggedIn'] != null) {
     $loggedIn = true;
-}
-else {
+    $firstName = $_SESSION['first_name'];
+    $lastname = $_SESSION['last_name'];
+} else {
     $loggedIn = false;
 }
 
