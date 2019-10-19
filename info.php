@@ -41,40 +41,43 @@ if (!$_SESSION['loggedIn']) {
 
 <body>
 
-    <div class="header">
-        <h1 class="display-4">
-            House Boat info
-        </h1>
-
-        <div class="shadow p-4 mb-4 bg-white">
-            <div class="container">
-
-                <!-- bootstrap navbar -->
-                <ul class="nav nav-tabs nav-justified">
-                    <li class="nav-item">
-                        <a class="nav-link" href="home.php">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="info.php">Info</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Link 3</a>
-                    </li>
-                </ul>
-
-                <?php
-                foreach ($db->query('SELECT first_name, month_start, month_end, day_start, day_end, year_start, year_end FROM user_profile AS u
-                    JOIN dates AS n
-                    ON u.id = n.user_id') as $row) {
-                    echo '<p>' . $row['first_name'] . "'s date: "
-                        . $row['month_start'] . ", " . $row['day_start'] . ", " . $row['year_start']
-                        . " - " . $row['month_end'] . ", " . $row['day_end'] . ", " . $row['year_end']
-                        . "</p>";
-                }
-                ?>
-            </div>
+    <div class="bg">
+        <div class="header">
+            <h1 class="display-4">
+                House Boat info
+            </h1>
         </div>
     </div>
+
+    <div class="shadow p-4 mb-4 bg-white">
+        <div class="container">
+
+            <!-- bootstrap navbar -->
+            <ul class="nav nav-tabs nav-justified">
+                <li class="nav-item">
+                    <a class="nav-link" href="home.php">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="info.php">Info</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link 3</a>
+                </li>
+            </ul>
+
+            <?php
+            foreach ($db->query('SELECT first_name, month_start, month_end, day_start, day_end, year_start, year_end FROM user_profile AS u
+                    JOIN dates AS n
+                    ON u.id = n.user_id') as $row) {
+                echo '<p>' . $row['first_name'] . "'s date: "
+                    . $row['month_start'] . ", " . $row['day_start'] . ", " . $row['year_start']
+                    . " - " . $row['month_end'] . ", " . $row['day_end'] . ", " . $row['year_end']
+                    . "</p>";
+            }
+            ?>
+        </div>
+    </div>
+
 
 
     <script src="javascript.js"></script>
