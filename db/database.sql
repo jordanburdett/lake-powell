@@ -29,10 +29,11 @@ CREATE TABLE note (
 );
 
 
-INSERT INTO user_profile (username, password, first_name, last_name) VALUES ('jordan', 'password', 'jordan', 'burdett');
-INSERT INTO user_profile (username, password, first_name, last_name) VALUES ('amber', 'password', 'amber', 'parr');
-INSERT INTO user_profile (username, password, first_name, last_name) VALUES ('troy', 'password', 'troy', 'burdett');
-INSERT INTO user_profile (username, password, first_name, last_name) VALUES ('larry', 'password', 'larry', 'burdett');
+INSERT INTO user_profile (username, password, first_name, last_name) VALUES ('jordan', 'password', 'Jordan', 'Burdett');
+INSERT INTO user_profile (username, password, first_name, last_name) VALUES ('amber', 'password', 'Amber', 'Parr');
+INSERT INTO user_profile (username, password, first_name, last_name) VALUES ('troy', 'password', 'Troy', 'Burdett');
+INSERT INTO user_profile (username, password, first_name, last_name) VALUES ('larry', 'password', 'Larry', 'Burdett');
+INSERT INTO user_profile (username, password, first_name, last_name) VALUES ('admin', 'password', 'Brother', 'Birch');
 
 
 INSERT INTO dates (user_id, month_start, month_end, day_start, day_end, year_start, year_end) 
