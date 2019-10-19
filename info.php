@@ -43,7 +43,7 @@ if (!$_SESSION['loggedIn']) {
 
     <div class="bg">
         <div class="header">
-            <h1 class="display-4">
+            <h1 class="headerText">
                 House Boat info
             </h1>
         </div>
