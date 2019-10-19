@@ -54,3 +54,6 @@ where user_id = 0;
 SELECT first_name, month_start, month_end, day_start, day_end, year_start, year_end FROM user_profile AS u
 JOIN dates AS n
 ON u.id = n.user_id;
+
+SELECT username, password, first_name, last_name FROM user_profile
+WHERE username = 'jordan' AND password = 'password';

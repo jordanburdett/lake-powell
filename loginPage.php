@@ -3,8 +3,7 @@ session_start();
 
 if ($_SESSION['loggedIn'] != null) {
     $loggedIn = true;
-}
-else {
+} else {
     $loggedIn = false;
 }
 
@@ -32,62 +31,45 @@ else {
             </div>
 
             <p class="headerSmall">Shareholder website</p>
-
-
-            <?php
-            if ($loggedIn) {
-                echo "<p class='loggedIn' style='text-align:left; padding-left 5%;'>Welcome $firstName $lastName</p>";
-            } else {
-                echo "<a href='loginPage.php' class='btn btn-primary' id='login_here'>Login Here</a>";
-            }
-            ?>
-
-
         </div>
     </div>
 
     <div class="shadow p-4 mb-4 bg-white">
-        <div class="container">
+        <div class="container" id="reload">
 
             <!-- bootstrap navbar -->
             <ul class="nav nav-tabs nav-justified">
                 <li class="nav-item">
-                    <a class="nav-link active" href="home.php">Home</a>
+                    <a class="nav-link" href="home.php">Home</a>
                 </li>
-
-                <?php
-
-                if ($loggedIn) {
-
-                    echo "
-                <li class='nav-item'>
-                    <a class='nav-link' href='info.php'>Info</a>
+                <li class="nav-item">
+                    <a class="nav-link active" href="login.php">Login</a>
                 </li>
-                <li class='nav-item'>
-                    <a class='nav-link' href='#'>Link 3</a>
-                </li>";
-                }
-                ?>
             </ul>
 
             <div class="row">
                 <div class="col">
-                    <h2 class="smallHeader">col1</h2>
+                    <h2 class="smallHeader">Login</h2>
+
+                    <form name="loginForm" id="loginForm">
+                        <div class="form-group">
+                            <label for="username">Username:</label>
+                            <input type="txt" class="form-control" id="username" name="username">
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password:</label>
+                            <input type="password" name="password" class="form-control" id="password">
+                        </div>
+
+                        <button type="button" class="btn btn-primary" onclick="login()">Login</button>
+                    </form>
                 </div>
-                <div class="col">
-                    <h2 class="smallHeader">col2</h2>
-                </div>
+
             </div>
         </div>
     </div>
 
-    <div class="shadow p-4 mb-4 bg-whitesmoke">
-        <div class="container">
-            <div class="display-4" style="text-align:center;">
-                Pictures
-            </div>
-        </div>
-    </div>
+
 
     <div class="shadow p-4 mb-4 bg-white">
         <div class="container-fluid" style="background-color='whitesmoke; padding-top: 50px;">
