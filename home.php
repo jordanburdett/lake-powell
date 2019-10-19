@@ -94,7 +94,7 @@ if ($_SESSION['loggedIn'] != null) {
 
             <?php
             if ($loggedIn) {
-             echo "button class='btn btn-danger' onclick='logout()'>Logout</button>";
+             echo "<button class='btn btn-danger' onclick='logout()'>Logout</button>";
             }
 
             ?>
