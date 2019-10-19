@@ -44,6 +44,9 @@ if ($first_name == "") {
     <li class='nav-item'>
         <a class='nav-link' href='home.php'>Home</a>
     </li>
+    <li class='nav-item '>
+        <a class='nav-link active' href='loginPage.php'>Login</a>
+        </li>
     </ul>";
     echo "invalid login";
     echo "<div class='row'>
