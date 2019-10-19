@@ -40,6 +40,11 @@ foreach($db->query('SELECT username, password, first_name, last_name FROM user_p
 
 
 if ($first_name == "") {
+    echo "<ul class='nav nav-tabs nav-justified'>
+    <li class='nav-item'>
+        <a class='nav-link' href='home.php'>Home</a>
+    </li>
+    </ul>";
     echo "invalid login";
 }
 else
@@ -56,7 +61,7 @@ else
         <a class='nav-link' href='#'>Link 3</a>
     </li>
     </ul>";
-    echo '<p>' . $first_name . ', ' . $last_name . ' you are now logged in</p>';
+    echo '<p>' . $first_name . ' ' . $last_name . ' you are now logged in</p>';
     
 
     $_SESSION['loggedIn'] = true;
