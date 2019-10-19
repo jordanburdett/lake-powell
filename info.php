@@ -22,7 +22,7 @@ try {
 
 if (!$_SESSION['loggedIn']) {
     echo "You do not have access";
-    die("you don't have access");
+    die();
 }
 ?>
 
@@ -66,13 +66,20 @@ if (!$_SESSION['loggedIn']) {
             </ul>
 
             <?php
-            foreach ($db->query('SELECT first_name, month_start, month_end, day_start, day_end, year_start, year_end FROM user_profile AS u
+            foreach ($db->query('SELECT first_name, month_start, month_end, day_start, day_end, year_start, year_end, info FROM user_profile AS u
                     JOIN dates AS n
-                    ON u.id = n.user_id') as $row) {
+                    ON u.id = n.user_id
+                    JOIN note AS d
+                    ON d.date_id = n.id') as $row) {
                 echo '<p>' . $row['first_name'] . "'s date: "
                     . $row['month_start'] . ", " . $row['day_start'] . ", " . $row['year_start']
-                    . " - " . $row['month_end'] . ", " . $row['day_end'] . ", " . $row['year_end']
-                    . "</p>";
+                    . " - " . $row['month_end'] . ", " . $row['day_end'] . ", " . $row['year_end'];
+
+                    
+                    if ($row['info']) {
+                        echo " - " . $row['info'];
+                    }
+                    echo "</p>";
             }
             ?>
         </div>
