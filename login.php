@@ -33,7 +33,7 @@ $last_name = "";
 foreach($db->query('SELECT username, password, first_name, last_name FROM user_profile
                     WHERE username = \'' . $username .'\' AND password = \'' . $password .'\'') as $row) 
                     { 
-                        echo '<p>' . $row['username'] . ' , ' . $row['password'] . "</p>";
+                       
                         $first_name = $row['first_name'];
                         $last_name = $row['last_name'];
                     }
@@ -44,8 +44,20 @@ if ($first_name == "") {
 }
 else
 {
-    echo '<p>' . $first_name . '</p>';
-    echo '<p>' . $last_name . '</p>';
+
+    echo "<ul class='nav nav-tabs nav-justified'>
+    <li class='nav-item'>
+        <a class='nav-link active' href='home.php'>Home</a>
+    </li>
+    <li class='nav-item'>
+        <a class='nav-link' href='info.php'>Info</a>
+    </li>
+    <li class='nav-item'>
+        <a class='nav-link' href='#'>Link 3</a>
+    </li>
+    </ul>";
+    echo '<p>' . $first_name . ', ' . $last_name . ' you are now logged in</p>';
+    
 
     $_SESSION['loggedIn'] = true;
     $_SESSION['first_name'] = $first_name;
