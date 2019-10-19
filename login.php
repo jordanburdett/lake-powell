@@ -31,11 +31,11 @@ $last_name = "";
 
 
 foreach($db->query('SELECT username, password, first_name, last_name FROM user_profile
-                    WHERE username = ' . $username . 'AND password = ' . $password) as $row) 
+                    WHERE username = \'' . $username .'\' AND password = \'' . $password .'\'') as $row) 
                     { 
-                        //echo '<p>' . $row['username'] . ' , ' . $row['password'] . "</p>";
-                        //$first_name = $row['first_name'];
-                        //$last_name = $row['last_name'];
+                        echo '<p>' . $row['username'] . ' , ' . $row['password'] . "</p>";
+                        $first_name = $row['first_name'];
+                        $last_name = $row['last_name'];
                     }
 
 
