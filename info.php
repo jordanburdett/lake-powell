@@ -69,7 +69,7 @@ if (!$_SESSION['loggedIn']) {
             foreach ($db->query('SELECT first_name, month_start, month_end, day_start, day_end, year_start, year_end, info FROM user_profile AS u
                     JOIN dates AS n
                     ON u.id = n.user_id
-                    JOIN note AS d
+                    FULL OUTER JOIN note AS d
                     ON d.date_id = n.id') as $row) {
                 echo '<p>' . $row['first_name'] . "'s date: "
                     . $row['month_start'] . ", " . $row['day_start'] . ", " . $row['year_start']

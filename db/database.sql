@@ -52,7 +52,7 @@ VALUES (2, 7, 7, 25, 29, 2019, 2019);
 INSERT INTO dates (user_id, month_start, month_end, day_start, day_end, year_start, year_end) 
 VALUES (2, 8, 8, 5, 10, 2019, 2019);
 
-INSERT INTO note (user_id, date_id, info
+INSERT INTO note (user_id, date_id, info)
 VALUES (2, 5, 'Parr Family Trip');
 
 INSERT INTO dates (user_id, month_start, month_end, day_start, day_end, year_start, year_end) 
@@ -73,3 +73,10 @@ ON u.id = n.user_id;
 
 SELECT username, password, first_name, last_name FROM user_profile
 WHERE username = 'jordan' AND password = 'password';
+
+SELECT first_name, month_start, month_end, day_start, day_end, year_start, year_end, info, date_id, u.id, n.id, d.id
+FROM user_profile AS u
+JOIN dates AS n
+ON u.id = n.user_id
+FULL OUTER JOIN note AS d
+ON n.id = d.date_id;
