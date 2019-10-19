@@ -6,3 +6,9 @@ function login() {
 
     $("#reload").load('login.php', {'username': username, 'password':password })
 }
+
+function logout() {
+    $.post('logout.php');
+
+    location.reload();
+}
