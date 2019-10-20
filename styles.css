@@ -46,3 +46,17 @@
 .container {
     width: 100%;
 }
+
+#taken {
+    background-color: rgb(253, 117, 117);
+    color: white;
+    height: 4em;
+    border: solid black .5px;
+}
+
+#avaliable {
+    background-color: rgb(155, 255, 155);
+    color: white;
+    height: 4em;
+    border: solid black .5px;
+}

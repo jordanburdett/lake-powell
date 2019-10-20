@@ -69,7 +69,7 @@ if ($_SESSION['loggedIn'] != null) {
                     <a class='nav-link' href='info.php'>Info</a>
                 </li>
                 <li class='nav-item'>
-                    <a class='nav-link' href='#'>Link 3</a>
+                    <a class='nav-link' href='schedule.php'>Schedule</a>
                 </li>";
                 }
                 ?>
