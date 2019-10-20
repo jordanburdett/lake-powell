@@ -80,7 +80,7 @@ else
         <a class='nav-link' href='info.php'>Info</a>
     </li>
     <li class='nav-item'>
-        <a class='nav-link' href='#'>Link 3</a>
+        <a class='nav-link' href='schedule.php'>Schedule</a>
     </li>
     </ul>";
     echo "<h4 style='text-align:center; padding: 20px;'>Welcome ' . $first_name . ' ' . $last_name . ' you are now logged in</h4>";
