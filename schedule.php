@@ -1,7 +1,8 @@
 <?php
+session_start();
 
-
-if (!$_SESSION['loggedIn']) {
+echo var_dump($_SESSION);
+if ($_SESSION['loggedIn'] != true) {
     echo "You do not have access";
     die();
 }
