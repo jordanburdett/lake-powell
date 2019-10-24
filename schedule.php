@@ -75,6 +75,7 @@ try {
                 public $number;
                 public $isAvaliable;
                 public $dateId = null;
+                public $userId = 0;
             }
 
 
@@ -91,13 +92,13 @@ try {
 
             // query the info for current month || end month && current year || end year
             // day_start, day_end, dateId || if day start = null its a carry over from previous month or year
-            
+
             $dates = array();
             foreach ($db->query('SELECT day_start, day_end, year_start, year_end, user_id FROM dates
                     WHERE month_start = ' . date('n')) as $row) {
-                array_push($dates, $row['day_start'], $row['user_id'], $row['day_end']);
+                array_push($dates, $row['day_start'], $row['user_id'], $row['date_id'], $row['day_end']);
             }
-            
+
             $datesArray = array();
 
             $dateCounter = 0;
@@ -110,20 +111,23 @@ try {
                     //increment dateCounter to the end date of the first trip
 
                     $dateCounter++;
-                    $date_id = ($dates[$dateCounter]);
+                    $user_id = ($dates[$dateCounter]);
+                    $dateCounter++;
+                    $date_id = $dates[$dateCounter];
                     $dateCounter++;
 
                     while ($i != ($dates[$dateCounter])) {
-                       
+
                         $day = new Day;
                         $day->number = ($i);
                         $day->isAvaliable = false;
                         $day->dateId = $date_id;
+                        $day->userId = $user_id;
                         $i++;
                         array_push($datesArray, $day);
                     }
                     $day = new Day;
-                    $day ->number = $i;
+                    $day->number = $i;
                     $day->isAvaliable = false;
                     $day->dateId = $date_id;
                     array_push($datesArray, $day);
@@ -153,7 +157,7 @@ try {
             //create the days
             echo "<div class='row'>";
 
-            
+
             $indexOfDates = 0;
             for ($i = 0; $i < 35; $i++) {
 
@@ -164,11 +168,24 @@ try {
                 }
 
                 if ($i >= ($dayOfWeek) && $i < date('t') + $dayOfWeek) {
-    
+
                     // the actual day
                     if ($datesArray[$indexOfDates]->isAvaliable) {
                         echo "<div class='col' id='avaliable'>" . $datesArray[$indexOfDates]->number . "</div>";
                     } else {
+
+                        //query the info to get who has what date
+                        $firstName = "";
+                        $lastName = "";
+                        $id = 0;
+                        foreach ($db->query('SELECT username, password, first_name, last_name FROM user_profile
+                        WHERE id = ' . $datesArray[$indexOfDates]->user_id) as $row) {
+                            $firstName = $row['first_name'];
+                            $lastName = $row['last_name']
+                        }
+
+
+
                         echo "<div class='col' id='taken'>" . $datesArray[$indexOfDates]->number . "<p>hello</p></div>";
                     }
 
