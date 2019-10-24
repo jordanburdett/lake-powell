@@ -26,7 +26,7 @@ try {
 }
 
 
-echo date('t');
+
 ?>
 
 <!DOCTYPE html>
@@ -96,13 +96,10 @@ echo date('t');
             // day_start, day_end, dateId || if day start = null its a carry over from previous month or year
             
             $dates = array();
-            echo "hello???";
             foreach ($db->query('SELECT day_start, day_end, year_start, year_end, user_id FROM dates
                     WHERE month_start = ' . date('n')) as $row) {
                 array_push($dates, $row['day_start'], $row['user_id'], $row['day_end']);
             }
-
-            echo var_dump($dates);
             
             $datesArray = array();
 
@@ -120,7 +117,7 @@ echo date('t');
                     $dateCounter++;
 
                     while ($i != ($dates[$dateCounter])) {
-                        echo "in while loop";
+                       
                         $day = new Day;
                         $day->number = ($i);
                         $day->isAvaliable = false;

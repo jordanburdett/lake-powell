@@ -43,13 +43,14 @@ INSERT INTO note (user_id, date_id, info)
 VALUES (1, 1, 'Burdett Family Trip');
 
 INSERT INTO dates (user_id, month_start, month_end, day_start, day_end, year_start, year_end) 
-VALUES (1, 8, 8, 10, 15, 2019, 2019);
+VALUES (1, 10, 10, 10, 15, 2019, 2019);
 
 INSERT INTO dates (user_id, month_start, month_end, day_start, day_end, year_start, year_end) 
-VALUES (1, 8, 8, 20, 25, 2019, 2019);
+VALUES (1, 10, 10, 20, 25, 2019, 2019);
 
 INSERT INTO dates (user_id, month_start, month_end, day_start, day_end, year_start, year_end) 
 VALUES (2, 7, 7, 25, 29, 2019, 2019);
+
 INSERT INTO dates (user_id, month_start, month_end, day_start, day_end, year_start, year_end) 
 VALUES (2, 8, 8, 5, 10, 2019, 2019);
 
