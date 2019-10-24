@@ -181,7 +181,7 @@ try {
                         $firstName = "";
                         $lastName = "";
                         
-                        echo  $datesArray[$indexOfDates]->date_id;
+                        echo  $datesArray[$indexOfDates]->dateId;
                         $statement = $db->prepare("SELECT first_name, last_name FROM user_profile as u, dates as d
                         WHERE u.id = d.user_id AND d.id = " . $datesArray[$indexOfDates]->dateId);
                         $statement = $db->execute();
