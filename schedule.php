@@ -173,7 +173,9 @@ try {
                     // the actual day
                     if ($datesArray[$indexOfDates]->isAvaliable) {
                         echo "<div class='col' id='avaliable'>" . $datesArray[$indexOfDates]->number . "</div>";
-                    } else {
+                    } 
+                    else 
+                    {
 
                         //query the info to get who has what date
                         $firstName = "";
@@ -181,7 +183,7 @@ try {
                         
                         echo  $datesArray[$indexOfDates]->date_id;
                         $statement = $db->prepare("SELECT first_name, last_name FROM user_profile as u, dates as d
-                        WHERE u.id = d.user_id AND d.id = " . $datesArray[$indexOfDates]->date_id);
+                        WHERE u.id = d.user_id AND d.id = " . $datesArray[$indexOfDates]->dateId);
                         $statement = $db->execute();
 
                         echo "BEFORE FETCHING";
