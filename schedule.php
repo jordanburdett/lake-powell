@@ -179,8 +179,10 @@ try {
                         $firstName = "";
                         $lastName = "";
                         $id = 0;
+
+                        
                         foreach ($db->query('SELECT first_name, last_name FROM user_profile as u, dates as d
-                        WHERE u.id = ' . $datesArray[$indexOfDates]->date_id) as $row) {
+                        WHERE u.id = ' . $datesArray[$indexOfDates]->date_id . '') as $row) {
                             $firstName = $row['first_name'];
                             $lastName = $row['last_name'];
                         }
