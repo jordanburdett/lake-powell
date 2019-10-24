@@ -184,11 +184,12 @@ try {
                         WHERE u.id = " . $datesArray[$indexOfDates]->date_id);
                         $statement = $db->execute();
 
+                        echo "BEFORE FETCHING";
                         while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
                             $firstName = $row['first_name'];
                             $lastName = $row['last_name'];
                         }
-                        
+
                         echo "<div class='col' id='taken'>" . $datesArray[$indexOfDates]->number . "<p>$firstName $lastName</p></div>";
                     }
 
