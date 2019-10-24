@@ -179,9 +179,9 @@ try {
                         $firstName = "";
                         $lastName = "";
                         
-                        
+                        echo  $datesArray[$indexOfDates]->date_id;
                         $statement = $db->prepare("SELECT first_name, last_name FROM user_profile as u, dates as d
-                        WHERE u.id = " . $datesArray[$indexOfDates]->date_id);
+                        WHERE u.id = d.user_id AND d.id = " . $datesArray[$indexOfDates]->date_id);
                         $statement = $db->execute();
 
                         echo "BEFORE FETCHING";

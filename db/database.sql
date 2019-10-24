@@ -82,3 +82,6 @@ JOIN dates AS n
 ON u.id = n.user_id
 FULL OUTER JOIN note AS d
 ON n.id = d.date_id;
+
+SELECT first_name, last_name FROM user_profile as u, dates as d
+WHERE u.id = d.user_id AND d.id = 3;
