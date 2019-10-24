@@ -178,17 +178,17 @@ try {
                         //query the info to get who has what date
                         $firstName = "";
                         $lastName = "";
-                        $id = 0;
-
                         
-                        foreach ($db->query('SELECT first_name, last_name FROM user_profile as u, dates as d
-                        WHERE u.id = ' . $datesArray[$indexOfDates]->date_id . '') as $row) {
+                        
+                        $statement = $db->prepare("SELECT first_name, last_name FROM user_profile as u, dates as d
+                        WHERE u.id = " . $datesArray[$indexOfDates]->date_id);
+                        $statement = $db->execute();
+
+                        while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
                             $firstName = $row['first_name'];
                             $lastName = $row['last_name'];
                         }
-
-
-
+                        
                         echo "<div class='col' id='taken'>" . $datesArray[$indexOfDates]->number . "<p>$firstName $lastName</p></div>";
                     }
 
