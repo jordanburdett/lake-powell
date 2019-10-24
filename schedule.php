@@ -179,15 +179,15 @@ try {
                         $firstName = "";
                         $lastName = "";
                         $id = 0;
-                        foreach ($db->query('SELECT username, password, first_name, last_name FROM user_profile
-                        WHERE id = ' . $datesArray[$indexOfDates]->user_id) as $row) {
+                        foreach ($db->query('SELECT first_name, last_name FROM user_profile
+                        WHERE id = ' . $datesArray[$indexOfDates]->date_id) as $row) {
                             $firstName = $row['first_name'];
                             $lastName = $row['last_name'];
                         }
 
 
 
-                        echo "<div class='col' id='taken'>" . $datesArray[$indexOfDates]->number . "<p>hello</p></div>";
+                        echo "<div class='col' id='taken'>" . $datesArray[$indexOfDates]->number . "<p>$firstName $lastName</p></div>";
                     }
 
                     $indexOfDates++;
