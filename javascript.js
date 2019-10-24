@@ -19,6 +19,7 @@ daysSelected = [];
 function selectDay(day) {
     
     console.log("In selectDay method for " + day);
+    console.log('date' + day);
     // if we havent selected anything
     if(!daysSelected.length) {
 
