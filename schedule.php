@@ -180,7 +180,7 @@ try {
                         //query the info to get who has what date
                         $firstName = "";
                         $lastName = "";
-                        
+                        $dateId = $datesArray[$indexOfDates]->dateId;
                         
                         $statement = $db->prepare("SELECT first_name, last_name FROM user_profile as u, dates as d
                         WHERE u.id = d.user_id AND d.id = " . $datesArray[$indexOfDates]->dateId);
@@ -193,7 +193,7 @@ try {
                             $lastName = $row['last_name'];
                         }
 
-                        echo "<div class='col' id='taken'>" . $datesArray[$indexOfDates]->number . "<p>$firstName $lastName</p></div>";
+                        echo "<div class='col' id='taken'>" . $datesArray[$indexOfDates]->number . "<a href'dateDetails.php?dateId=$dateId'><p>$firstName $lastName</p></a></div>";
                     }
 
                     $indexOfDates++;
