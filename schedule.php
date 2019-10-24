@@ -181,7 +181,7 @@ try {
                         foreach ($db->query('SELECT username, password, first_name, last_name FROM user_profile
                         WHERE id = ' . $datesArray[$indexOfDates]->user_id) as $row) {
                             $firstName = $row['first_name'];
-                            $lastName = $row['last_name']
+                            $lastName = $row['last_name'];
                         }
 
 
