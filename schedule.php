@@ -82,9 +82,6 @@ try {
             $dayOfWeek = date('w');
             // FOR CURRENT DAY DATE('j');
             for ($current_day = date('j'); $current_day != 1; $current_day--) {
-
-                // echo "<p>$current_day</p>";
-                // echo "<p>$dayOfWeek</p>";
                 if ($dayOfWeek == 0) {
                     $dayOfWeek = 6;
                 } else {
@@ -172,7 +169,7 @@ try {
                     if ($datesArray[$indexOfDates]->isAvaliable) {
                         echo "<div class='col' id='avaliable'>" . $datesArray[$indexOfDates]->number . "</div>";
                     } else {
-                        echo "<div class='col' id='taken'>" . $datesArray[$indexOfDates]->number . "</div>";
+                        echo "<div class='col' id='taken'>" . $datesArray[$indexOfDates]->number . "<p>hello</p></div>";
                     }
 
                     $indexOfDates++;
