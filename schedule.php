@@ -184,10 +184,10 @@ try {
                         echo  $datesArray[$indexOfDates]->dateId;
                         $statement = $db->prepare("SELECT first_name, last_name FROM user_profile as u, dates as d
                         WHERE u.id = d.user_id AND d.id = " . $datesArray[$indexOfDates]->dateId);
-                        echo "test";
+                        
                         $statement->execute();
 
-                        echo "BEFORE FETCHING";
+                        
                         while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
                             $firstName = $row['first_name'];
                             $lastName = $row['last_name'];
