@@ -51,7 +51,6 @@ echo date('t');
 
             <?php
 
-            //object oriented PHP! Learn when you get a better cell signal
             class Day
             {
                 public $number;
@@ -82,8 +81,9 @@ echo date('t');
                     WHERE month_start = ' . date('F')) as $row) {
                 array_push($dates, $row['day_start'], $row['user_id'], $row['day_end']);
             }
-            
+
             echo var_dump($dates);
+            echo "hello???";
             $datesArray = array();
 
             $dateCounter = 0;
