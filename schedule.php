@@ -75,14 +75,17 @@ echo date('t');
                 }
             }
 
-            echo "START DATE IS $dayOfWeek";
-
-
-
             // query the info for current month || end month && current year || end year
             // day_start, day_end, dateId || if day start = null its a carry over from previous month or year
+            
+
+            foreach ($db->query('SELECT day_start, day_end, year_start, year_end, user_id FROM dates
+                    WHERE month_start = ' . date('F')) as $row) {
+                array_push($dates, $row['day_start'], $row['user_id'], $row['day_end']);
+            }
+
             $row = array('day_start' => 5, 'day_end' => 10);
-            $dates = array(5, 0, 10, 12, 2, 16);
+            
 
             $datesArray = array();
 
