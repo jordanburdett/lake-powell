@@ -40,6 +40,7 @@ try {
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="javascript.js"></script>
 </head>
 
 <body>
@@ -172,7 +173,7 @@ try {
 
                     // the actual day
                     if ($datesArray[$indexOfDates]->isAvaliable) {
-                        echo "<div class='col' id='avaliable' name='date" . $datesArray[$indexOfDates]->number . "'  onclick='selectDay( " . $datesArray[$indexOfDates]->number . ")'>"
+                        echo "<div class='col' id='avaliable' name='date" . $datesArray[$indexOfDates]->number . "'  onclick='selectDay(" . $datesArray[$indexOfDates]->number . ")'>"
                          . $datesArray[$indexOfDates]->number . "</div>";
                     } 
                     else 
@@ -215,7 +216,7 @@ try {
 
 
 
-    <script src="javascript.js"></script>
+    
 </body>
 
 </html>
