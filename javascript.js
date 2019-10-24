@@ -25,7 +25,7 @@ function selectDay(day) {
         // add this day to the front of our deque
         daysSelected.push(day);
         // change the class of the div to something else
-        document.getElementsByName('date' + value).classname = "selected";
+        document.getElementsByName('date' + day).classname = "selected";
     }
     else {
         // check to see if it is - 1 of the beginning or + 1 of the end
