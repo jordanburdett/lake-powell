@@ -60,3 +60,10 @@
     height: 4em;
     border: solid black .5px;
 }
+
+#selected {
+    background-color: rgb(255, 143, 68);
+    color: white;
+    height: 4em;
+    border: solid black .5px;
+}

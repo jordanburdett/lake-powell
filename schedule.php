@@ -172,7 +172,8 @@ try {
 
                     // the actual day
                     if ($datesArray[$indexOfDates]->isAvaliable) {
-                        echo "<div class='col' id='avaliable'>" . $datesArray[$indexOfDates]->number . "</div>";
+                        echo "<div class='col' id='avaliable' name='date" . $datesArray[$indexOfDates]->number . "'  onclick='selectDay( " . $datesArray[$indexOfDates]->number . ")'>"
+                         . $datesArray[$indexOfDates]->number . "</div>";
                     } 
                     else 
                     {
@@ -198,6 +199,7 @@ try {
 
                     $indexOfDates++;
                 } else {
+                    // place holder not actual days
                     echo "<div class='col' style='border:solid black .5px;'></div>";
                 }
             }
