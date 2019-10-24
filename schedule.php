@@ -163,7 +163,7 @@ echo date('t');
             $indexOfDates = 0;
             for ($i = 0; $i < 35; $i++) {
 
-                if ($i >= ($dayOfWeek) && $i < date('t')) {
+                if ($i >= ($dayOfWeek) && $i < date('n')) {
                     // wrap every 7 days
                     if ($i % 7 == 0) {
 
