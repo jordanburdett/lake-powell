@@ -163,13 +163,14 @@ echo date('t');
             $indexOfDates = 0;
             for ($i = 0; $i < 35; $i++) {
 
-                if ($i >= ($dayOfWeek) && $i < date('n')) {
-                    // wrap every 7 days
-                    if ($i % 7 == 0) {
+                //wrap every 7 days
+                if ($i % 7 == 0) {
 
-                        echo "</div><div class='row'>";
-                    }
+                    echo "</div><div class='row'>";
+                }
 
+                if ($i >= ($dayOfWeek) && $i < date('t') + $dayOfWeek) {
+    
                     // the actual day
                     if ($datesArray[$indexOfDates]->isAvaliable) {
                         echo "<div class='col' id='avaliable'>" . $datesArray[$indexOfDates]->number . "</div>";
