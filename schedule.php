@@ -82,10 +82,8 @@ echo date('t');
                     WHERE month_start = ' . date('F')) as $row) {
                 array_push($dates, $row['day_start'], $row['user_id'], $row['day_end']);
             }
-
-            $row = array('day_start' => 5, 'day_end' => 10);
             
-
+            echo var_dump($dates);
             $datesArray = array();
 
             $dateCounter = 0;
