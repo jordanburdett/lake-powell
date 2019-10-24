@@ -94,9 +94,9 @@ try {
             // day_start, day_end, dateId || if day start = null its a carry over from previous month or year
 
             $dates = array();
-            foreach ($db->query('SELECT day_start, day_end, year_start, year_end, user_id FROM dates
+            foreach ($db->query('SELECT id, day_start, day_end, year_start, year_end, user_id FROM dates
                     WHERE month_start = ' . date('n')) as $row) {
-                array_push($dates, $row['day_start'], $row['user_id'], $row['date_id'], $row['day_end']);
+                array_push($dates, $row['day_start'], $row['user_id'], $row['id'], $row['day_end']);
             }
 
             $datesArray = array();
@@ -130,6 +130,7 @@ try {
                     $day->number = $i;
                     $day->isAvaliable = false;
                     $day->dateId = $date_id;
+                    $day->userId = $user_id;
                     array_push($datesArray, $day);
                     $dateCounter++;
                 } else {
