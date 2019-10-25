@@ -62,7 +62,7 @@
     border: solid black .5px;
 }
 
-.selected {
+#selected, .selected {
     background-color: rgb(255, 143, 68);
     color: white;
     height: 5em;

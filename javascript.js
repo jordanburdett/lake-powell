@@ -32,6 +32,7 @@ function selectDay(day) {
         // check to see if it is - 1 of the beginning or + 1 of the end
         
         $("[name='date" + day + "']").toggleClass("selected");
+        $("[name='date" + day + "']").attr('id', 'selected');
         console.log("[name='date" + day + "']");
     }
     console.log("testing this");
