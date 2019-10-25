@@ -50,20 +50,21 @@
 #taken {
     background-color: rgb(253, 117, 117);
     color: white;
-    height: 4em;
+    height: 5em;
     border: solid black .5px;
+    font-size: 1rem;
 }
 
 #avaliable {
     background-color: rgb(155, 255, 155);
     color: white;
-    height: 4em;
+    height: 5em;
     border: solid black .5px;
 }
 
 .selected {
     background-color: rgb(255, 143, 68);
     color: white;
-    height: 4em;
+    height: 5em;
     border: solid black .5px;
 }
