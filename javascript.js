@@ -34,6 +34,6 @@ function selectDay(day) {
         $("[name='date" + day + "']").toggleClass("selected");
         console.log("[name='date" + day + "']");
     }
-
-    console.log(document.getElementsByName("date1"));
+    console.log("testing this");
+    console.log(this);
 }
