@@ -30,6 +30,6 @@ function selectDay(day) {
     }
     else {
         // check to see if it is - 1 of the beginning or + 1 of the end
-
+        $("[name='date" + day + "']").addClass("selected");
     }
 }
