@@ -174,22 +174,20 @@ try {
                     // the actual day
                     if ($datesArray[$indexOfDates]->isAvaliable) {
                         echo "<div class='col' id='avaliable' name='date" . $datesArray[$indexOfDates]->number . "'  onclick='selectDay(" . $datesArray[$indexOfDates]->number . ")'>"
-                         . $datesArray[$indexOfDates]->number . "</div>";
-                    } 
-                    else 
-                    {
+                            . $datesArray[$indexOfDates]->number . "</div>";
+                    } else {
 
                         //query the info to get who has what date
                         $firstName = "";
                         $lastName = "";
                         $dateId = $datesArray[$indexOfDates]->dateId;
-                        
+
                         $statement = $db->prepare("SELECT first_name, last_name FROM user_profile as u, dates as d
                         WHERE u.id = d.user_id AND d.id = " . $datesArray[$indexOfDates]->dateId);
-                        
+
                         $statement->execute();
 
-                        
+
                         while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
                             $firstName = $row['first_name'];
                             $lastName = $row['last_name'];
@@ -210,21 +208,22 @@ try {
 
             echo "</div>";
             ?>
+            <br>
+            <div id="infoBox" style="">
+                <h3>Trip Info</h3>
+                <textarea class="form-control" id="info" column="5" ></textarea>
+            </div>
+
 
             <button class="btn btn-primary" style="" id="reserveButton">Reserve Dates</button>
-            <div id="infoBox" style="">
-            <label>Trip Info</label>
-            <textarea id="info" column="5">Write info here</textarea>
-            </div>
         </div>
-
 
         <div id="confirm"></div>
     </div>
 
 
 
-    
+
 </body>
 
 </html>
