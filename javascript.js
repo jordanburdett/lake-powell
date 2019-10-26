@@ -45,9 +45,9 @@ function selectDay(day) {
 
 function removeSelected(day) {
     console.log("REMOVE SELECTED");
-    $("[name='date" + day + "']").attr('id', 'available');
+    $("[name='date" + day + "']").attr('id', 'avaliable');
     $("[name='date" + day + "']").attr('onclick', 'selectDay(' + day + ')');
-    $("[name='date" + day + "']").addClass('available');
+    
     var indexToRemove = daysSelected.indexOf(day);
     daysSelected.splice(indexToRemove, 1);
     
