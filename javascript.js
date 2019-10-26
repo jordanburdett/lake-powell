@@ -55,7 +55,7 @@ function removeSelected(day) {
 
 }
 
-$("reserveButton").click(function(){
+$("#reserveButton").click(function(){
     var year = document.getElementById("yearNumber").value;
     var month = document.getElementById("monthNumber").value;
     var info = document.getElementById("info").value;
