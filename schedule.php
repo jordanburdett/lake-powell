@@ -148,10 +148,11 @@ try {
 
             //display the month
             echo "<h3 class='display-4' style='text-align:center;'>" . date('F') . "</h3>";
+            echo "<p>Click any green space to reserve the boat</p>";
             echo "<h3 id='monthNumber'  style='display:none;' value='" . date('n') . "'></h3>";
             echo "<h3 id='yearNumber'   style='display:none;' value='" . date('Y') . "'></h3>";
             echo "<div class='row' style='border:solid black;'>";
-            echo "<p>Click any green space to reserve the boat</p>";
+           
             //create the header of days
             for ($i = 0; $i < 7; $i++) {
                 echo "<div class='col' style='text-align:center;'>" . $days[$i] . "</div>";
