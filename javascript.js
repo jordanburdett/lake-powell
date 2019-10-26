@@ -49,7 +49,7 @@ function selectDay(day) {
 
 function removeSelected(day) {
 
-    if (daysSelected[0] - 1 == day || day == daysSelected[daysSelected.length - 1] + 1) {
+    if (daysSelected[0] == day || day == daysSelected[daysSelected.length - 1]) {
         console.log("REMOVE SELECTED");
         $("[name='date" + day + "']").attr('id', 'avaliable');
         $("[name='date" + day + "']").attr('onclick', 'selectDay(' + day + ')');
