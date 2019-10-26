@@ -148,6 +148,8 @@ try {
 
             //display the month
             echo "<h3 class='display-4' style='text-align:center;'>" . date('F') . "</h3>";
+            echo "<h3 id='monthNumber'> style='display:none;' value='" . date('n') . "'></h3>";
+            echo "<h3 id='yearNumber'> style='display:none;' value='" . date('Y') . "'></h3>";
             echo "<div class='row' style='border:solid black;'>";
 
             //create the header of days
@@ -209,7 +211,7 @@ try {
             echo "</div>";
             ?>
             <br>
-            <div id="infoBox" style="display:none;">
+            <div id="infoBox">
                 <h3>Trip Info</h3>
                 <textarea class="form-control" id="info" column="5"></textarea>
                 <br>

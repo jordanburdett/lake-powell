@@ -18,9 +18,6 @@ var daysSelected = [];
 
 function selectDay(day) {
 
-    console.log("In selectDay method for " + day);
-    console.log('date' + day);
-
     // if we havent selected anything
     if (!daysSelected.length) {
         // always allowed because it's the first
@@ -44,7 +41,6 @@ function selectDay(day) {
         }
     }
     daysSelected.sort();
-    console.log(daysSelected);
 }
 
 function removeSelected(day) {
@@ -59,6 +55,14 @@ function removeSelected(day) {
 
 }
 
-function reserve() {
-    // jquery load into div underneath everything 
-}
+$("reserveButton").click(function(){
+    var year = document.getElementById("yearNumber").value;
+    var month = document.getElementById("monthNumber").value;
+    var info = document.getElementById("info").value;
+
+    console.log(info);
+
+    $('confirm').load('login.php', { 'dayStart': daysSelected[0], 'dayEnd': daysSelected[daysSelected.length - 1]
+                      , 'year' : year, 'month': month, 'info': info});
+      
+});

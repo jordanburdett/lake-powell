@@ -28,14 +28,15 @@ $username = $_POST['username'];
 $password = $_POST['password'];
 $first_name = "";
 $last_name = "";
+$user_id = 0;
 
-
-foreach($db->query('SELECT username, password, first_name, last_name FROM user_profile
+foreach($db->query('SELECT username, password, first_name, last_name, user_id FROM user_profile
                     WHERE username = \'' . $username .'\' AND password = \'' . $password .'\'') as $row) 
                     { 
                        
                         $first_name = $row['first_name'];
                         $last_name = $row['last_name'];
+                        $user_id = $row['user_id'];
                     }
 
 
@@ -89,5 +90,6 @@ else
     $_SESSION['loggedIn'] = true;
     $_SESSION['first_name'] = $first_name;
     $_SESSION['last_name'] = $last_name;
+    $_SESSION['user_id']   = $user_id;
 }
 ?>
