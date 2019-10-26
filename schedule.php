@@ -216,7 +216,7 @@ try {
                 <textarea class="form-control" id="info" column="5"></textarea>
                 <br>
 
-                <button class="btn btn-primary" id="reserveButton">Reserve Dates</button>
+                <button class="btn btn-primary" id="reserveButton" onclick="reserve()">Reserve Dates</button>
             </div>
 
 

@@ -55,7 +55,7 @@ function removeSelected(day) {
 
 }
 
-$("#reserveButton").click(function(){
+function reserve(){
     var year = document.getElementById("yearNumber").value;
     var month = document.getElementById("monthNumber").value;
     var info = document.getElementById("info").value;
@@ -65,4 +65,4 @@ $("#reserveButton").click(function(){
     $('confirm').load('login.php', { 'dayStart': daysSelected[0], 'dayEnd': daysSelected[daysSelected.length - 1]
                       , 'year' : year, 'month': month, 'info': info});
       
-});
+}
