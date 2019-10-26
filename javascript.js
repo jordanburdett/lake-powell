@@ -31,9 +31,14 @@ function selectDay(day) {
     else {
         // check to see if it is - 1 of the beginning or + 1 of the end
         $("[name='date" + day + "']").attr('id', 'selected');
+        $("[name='date" + day + "']").attr('onclick', 'removeSelected(' + day +')');
         console.log("[name='date" + day + "']");
         daysSelected.push(day);
     }
     console.log(daysSelected);
+}
+
+function removeSelected(day) {
+    console.log("REMOVE SELECTED");
 }
     
