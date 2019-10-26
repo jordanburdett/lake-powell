@@ -73,14 +73,5 @@ function reserve() {
         console.log("finished");
     });
 
-    var day;
-    for (var i = 0; i < daysSelected.length; i++) {
-        console.log(i);
-        console.log("RUNNING THIS ONE: " + daysSelected[i]);
-        markAsTaken(daysSelected[i]);
-    }
-
-    daysSelected = [];
-
     location.reload();
 }
