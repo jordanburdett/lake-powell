@@ -66,7 +66,9 @@ function reserve(){
     console.log(daysSelected[0]);
     console.log(daysSelected[daysSelected.length - 1]);
 
-    $("#confirm").load('login.php', { 'dayStart': daysSelected[0], 'dayEnd': daysSelected[daysSelected.length - 1]
-                      , 'year' : year, 'month': month, 'info': info});
+    $('#confirm').load('login.php', { 'dayStart': daysSelected[0], 'dayEnd': daysSelected[daysSelected.length - 1]
+                      , 'year' : year, 'month': month, 'info': info}, function() {
+                          console.log("finished");
+                      });
       
 }
