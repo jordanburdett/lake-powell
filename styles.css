@@ -55,7 +55,7 @@
     font-size: 1rem;
 }
 
-#avaliable {
+#avaliable, .avaliable {
     background-color: rgb(155, 255, 155);
     color: white;
     height: 5em;
