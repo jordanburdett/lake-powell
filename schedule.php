@@ -100,6 +100,8 @@ try {
                 array_push($dates, $row['day_start'], $row['user_id'], $row['id'], $row['day_end']);
             }
 
+            echo var_dump($dates);
+
             $datesArray = array();
 
             $dateCounter = 0;

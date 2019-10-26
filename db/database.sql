@@ -35,33 +35,6 @@ INSERT INTO user_profile (username, password, first_name, last_name) VALUES ('tr
 INSERT INTO user_profile (username, password, first_name, last_name) VALUES ('larry', 'password', 'Larry', 'Burdett');
 INSERT INTO user_profile (username, password, first_name, last_name) VALUES ('admin', 'password', 'Brother', 'Birch');
 
-
-INSERT INTO dates (user_id, month_start, month_end, day_start, day_end, year_start, year_end) 
-VALUES (1, 7, 8, 29, 5, 2019, 2019);
-
-INSERT INTO note (user_id, date_id, info)
-VALUES (1, 1, 'Burdett Family Trip');
-
-INSERT INTO dates (user_id, month_start, month_end, day_start, day_end, year_start, year_end) 
-VALUES (1, 10, 10, 10, 15, 2019, 2019);
-
-INSERT INTO dates (user_id, month_start, month_end, day_start, day_end, year_start, year_end) 
-VALUES (1, 10, 10, 20, 25, 2019, 2019);
-
-INSERT INTO dates (user_id, month_start, month_end, day_start, day_end, year_start, year_end) 
-VALUES (2, 7, 7, 25, 29, 2019, 2019);
-
-INSERT INTO dates (user_id, month_start, month_end, day_start, day_end, year_start, year_end) 
-VALUES (2, 8, 8, 5, 10, 2019, 2019);
-
-INSERT INTO note (user_id, date_id, info)
-VALUES (2, 5, 'Parr Family Trip');
-
-INSERT INTO dates (user_id, month_start, month_end, day_start, day_end, year_start, year_end) 
-VALUES (2, 7, 7, 15, 20, 2019, 2019);
-
-
-
 SELECT * from user_profile;
 SELECT * from dates;
 
