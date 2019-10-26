@@ -96,7 +96,7 @@ try {
 
             $dates = array();
             foreach ($db->query('SELECT id, day_start, day_end, year_start, year_end, user_id FROM dates
-                    WHERE month_start = ' . date('n')) as $row) {
+                    WHERE month_start = ' . date('n') . 'ORDER BY day_start') as $row) {
                 array_push($dates, $row['day_start'], $row['user_id'], $row['id'], $row['day_end']);
             }
 
