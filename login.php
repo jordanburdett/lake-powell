@@ -36,7 +36,7 @@ foreach($db->query('SELECT username, password, first_name, last_name, id FROM us
                        
                         $first_name = $row['first_name'];
                         $last_name = $row['last_name'];
-                        $user_id = $row['user_id'];
+                        $user_id = $row['id'];
                     }
 
 
