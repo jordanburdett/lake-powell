@@ -14,7 +14,7 @@ function logout() {
 }
 
 //empty array for the days selected
-daysSelected = [];
+var daysSelected = [];
 
 function selectDay(day) {
     
