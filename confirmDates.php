@@ -45,6 +45,8 @@ $date_id = $db->lastInsertId('dates_id_seq');
 $statement = $db->prepare("INSERT INTO note(user_id, date_id, info)
 VALUES ($user_id, $date_id, $info)");
 
+$statement->execute();
+
 echo "<p>Your dates for $month/$startDay/$year - $month/$dayEnd/$year</p>";
 echo "<p>Notes - $info</p>";
 
