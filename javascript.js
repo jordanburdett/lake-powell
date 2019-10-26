@@ -58,3 +58,7 @@ function removeSelected(day) {
     }
 
 }
+
+function reserve() {
+    // jquery load into div underneath everything 
+}

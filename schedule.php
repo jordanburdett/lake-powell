@@ -209,9 +209,17 @@ try {
 
 
             echo "</div>";
-
             ?>
+
+            <button class="btn btn-primary" style="" id="reserveButton">Reserve Dates</button>
+            <div id="infoBox" style="">
+            <label>Trip Info</label>
+            <textarea id="info" column="5">Write info here</textarea>
+            </div>
         </div>
+
+
+        <div id="confirm"></div>
     </div>
 
 
