@@ -66,13 +66,15 @@ function reserve() {
     console.log(daysSelected[0]);
     console.log(daysSelected[daysSelected.length - 1]);
 
-    $('#confirm').load('confirmDates.php', {
-        'dayStart': daysSelected[0], 'dayEnd': daysSelected[daysSelected.length - 1]
-        , 'year': year, 'month': month, 'info': info
-    }, function () {
-        console.log("finished");
-        location.reload();
-    });
+    if (info != "") {
 
-    
+        $('#confirm').load('confirmDates.php', {
+            'dayStart': daysSelected[0], 'dayEnd': daysSelected[daysSelected.length - 1]
+            , 'year': year, 'month': month, 'info': info
+        }, function () {
+            console.log("finished");
+            location.reload();
+        });
+    }
+
 }

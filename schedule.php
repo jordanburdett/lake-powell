@@ -212,10 +212,10 @@ try {
             echo "</div>";
             ?>
             <br>
-            <p>Click any green space to reserve the boat</p>
             <div>Green = Available</div>
             <div>red = taken</div>
             <div>orange = selected</div>
+            <br>
             <div id="infoBox">
                 <h3>Trip Info</h3>
                 <textarea class="form-control" id="info" column="5"></textarea>
