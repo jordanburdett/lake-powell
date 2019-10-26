@@ -30,7 +30,7 @@ $first_name = "";
 $last_name = "";
 $user_id = 0;
 
-foreach($db->query('SELECT username, password, first_name, last_name, user_id FROM user_profile
+foreach($db->query('SELECT username, password, first_name, last_name, id FROM user_profile
                     WHERE username = \'' . $username .'\' AND password = \'' . $password .'\'') as $row) 
                     { 
                        
@@ -87,9 +87,9 @@ else
     echo "<h4 style='text-align:center; padding: 20px;'>Welcome " . $first_name . " " . $last_name . " you are now logged in</h4>";
     
 
-    $_SESSION['loggedIn'] = true;
+    $_SESSION['loggedIn']   = true;
     $_SESSION['first_name'] = $first_name;
-    $_SESSION['last_name'] = $last_name;
-    $_SESSION['user_id']   = $user_id;
+    $_SESSION['last_name']  = $last_name;
+    $_SESSION['user_id']    = $user_id;
 }
 ?>
