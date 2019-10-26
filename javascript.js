@@ -56,8 +56,8 @@ function removeSelected(day) {
 }
 
 function markAsTaken(day) {
-    $("[name='date" + day + "']").attr('id', 'avaliable');
-    $("[name='date" + day + "']").attr('onclick', 'selectDay(' + day + ')');
+    console.log("changing " + day + " to taken");
+    $("[name='date" + day + "']").attr('id', 'taken');
     var indexToRemove = daysSelected.indexOf(day);
     daysSelected.splice(indexToRemove, 1);
 }
