@@ -55,7 +55,14 @@ function removeSelected(day) {
 
 }
 
-function reserve(){
+function markAsTaken(day) {
+    $("[name='date" + day + "']").attr('id', 'avaliable');
+    $("[name='date" + day + "']").attr('onclick', 'selectDay(' + day + ')');
+    var indexToRemove = daysSelected.indexOf(day);
+    daysSelected.splice(indexToRemove, 1);
+}
+
+function reserve() {
     var year = document.getElementById("yearNumber").getAttribute('value');
     var month = document.getElementById("monthNumber").getAttribute('value');
     var info = document.getElementById("info").value;
@@ -66,9 +73,14 @@ function reserve(){
     console.log(daysSelected[0]);
     console.log(daysSelected[daysSelected.length - 1]);
 
-    $('#confirm').load('confirmDates.php', { 'dayStart': daysSelected[0], 'dayEnd': daysSelected[daysSelected.length - 1]
-                      , 'year' : year, 'month': month, 'info': info}, function() {
-                          console.log("finished");
-                      });
-      
+    $('#confirm').load('confirmDates.php', {
+        'dayStart': daysSelected[0], 'dayEnd': daysSelected[daysSelected.length - 1]
+        , 'year': year, 'month': month, 'info': info
+    }, function () {
+        console.log("finished");
+    });
+
+    for (day of daysSelected) {
+        markAsTaken(day);
+    }
 }
