@@ -26,11 +26,11 @@ function selectDay(day) {
         // add this day to the front of our deque
         daysSelected.push(day);
         // change the class of the div to something else
-        $("[name='date" + day + "']").attr('id', 'selected');
+        $("[name='date" + day + "']").attr('onclick', 'removeSelected(' + day +')');
+        
     }
     else {
         // check to see if it is - 1 of the beginning or + 1 of the end
-        $("[name='date" + day + "']").attr('id', 'selected');
         $("[name='date" + day + "']").attr('onclick', 'removeSelected(' + day +')');
         console.log("[name='date" + day + "']");
         daysSelected.push(day);
@@ -42,7 +42,7 @@ function removeSelected(day) {
     console.log("REMOVE SELECTED");
     $("[name='date" + day + "']").attr('id', 'available');
     var indexToRemove = daysSelected.indexOf(day);
-    daysSelected.splice(day, 1);
+    daysSelected.splice(indexToRemove, 1);
     
 }
     
