@@ -39,7 +39,7 @@ function selectDay(day) {
         if (daysSelected[0] - 1 == day || day == daysSelected[daysSelected.length - 1] + 1) {
             $("[name='date" + day + "']").attr('onclick', 'removeSelected(' + day + ')');
             $("[name='date" + day + "']").attr('id', 'selected');
-            
+
             daysSelected.push(day);
         }
     }
@@ -48,11 +48,13 @@ function selectDay(day) {
 }
 
 function removeSelected(day) {
-    console.log("REMOVE SELECTED");
-    $("[name='date" + day + "']").attr('id', 'avaliable');
-    $("[name='date" + day + "']").attr('onclick', 'selectDay(' + day + ')');
 
-    var indexToRemove = daysSelected.indexOf(day);
-    daysSelected.splice(indexToRemove, 1);
+    if (daysSelected[0] - 1 == day || day == daysSelected[daysSelected.length - 1] + 1) {
+        console.log("REMOVE SELECTED");
+        $("[name='date" + day + "']").attr('id', 'avaliable');
+        $("[name='date" + day + "']").attr('onclick', 'selectDay(' + day + ')');
+        var indexToRemove = daysSelected.indexOf(day);
+        daysSelected.splice(indexToRemove, 1);
+    }
 
 }
