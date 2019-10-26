@@ -33,6 +33,6 @@ function selectDay(day) {
         $("[name='date" + day + "']").attr('id', 'selected');
         console.log("[name='date" + day + "']");
     }
-    console.log(daysSeLECTED);
+    console.log(daysSelected);
 }
     
