@@ -80,6 +80,7 @@ function reserve() {
         console.log("finished");
     });
 
+    var day;
     for (day of daysSelected) {
         markAsTaken(day);
     }
