@@ -56,8 +56,8 @@ function removeSelected(day) {
 }
 
 function reserve(){
-    var year = document.getElementById("yearNumber").value;
-    var month = document.getElementById("monthNumber").value;
+    var year = document.getElementById("yearNumber").getAttribute('value');
+    var month = document.getElementById("monthNumber").getAttribute('value');
     var info = document.getElementById("info").value;
 
     console.log(year);
