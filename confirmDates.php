@@ -43,7 +43,7 @@ $statement->execute();
 $date_id = $db->lastInsertId('dates_id_seq');
 
 $statement = $db->prepare("INSERT INTO note(user_id, date_id, info)
-VALUES ($user_id, $date_id, $info)");
+VALUES ($user_id, $date_id, '$info')");
 
 $statement->execute();
 
