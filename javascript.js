@@ -26,15 +26,13 @@ function selectDay(day) {
         // add this day to the front of our deque
         daysSelected.push(day);
         // change the class of the div to something else
-        document.getElementsByName('date' + day).classname = "selected";
+        $("[name='date" + day + "']").attr('id', 'selected');
     }
     else {
         // check to see if it is - 1 of the beginning or + 1 of the end
-        
-        $("[name='date" + day + "']").toggleClass("selected");
         $("[name='date" + day + "']").attr('id', 'selected');
         console.log("[name='date" + day + "']");
     }
-    console.log("testing this");
-    console.log(this);
+    console.log(daysSeLECTED);
 }
+    
