@@ -81,7 +81,9 @@ function reserve() {
     });
 
     var day;
-    for (day of daysSelected) {
-        markAsTaken(day);
+    for (var i = 0; i < daysSelected.length; i++) {
+        markAsTaken(daysSelected[i]);
     }
+
+    daysSelected = [];
 }
