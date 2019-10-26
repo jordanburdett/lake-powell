@@ -60,6 +60,8 @@ function reserve(){
     var month = document.getElementById("monthNumber").value;
     var info = document.getElementById("info").value;
 
+    console.log(year);
+    console.log(month);
     console.log(info);
 
     $('confirm').load('login.php', { 'dayStart': daysSelected[0], 'dayEnd': daysSelected[daysSelected.length - 1]
