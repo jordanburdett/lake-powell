@@ -82,6 +82,7 @@ function reserve() {
 
     var day;
     for (var i = 0; i < daysSelected.length; i++) {
+        console.log(i);
         console.log("RUNNING THIS ONE: " + daysSelected[i]);
         markAsTaken(daysSelected[i]);
     }
