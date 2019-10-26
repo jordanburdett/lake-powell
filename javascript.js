@@ -55,13 +55,6 @@ function removeSelected(day) {
 
 }
 
-function markAsTaken(day) {
-    console.log("changing " + day + " to taken");
-    $("[name='date" + day + "']").attr('id', 'taken');
-    var indexToRemove = daysSelected.indexOf(day);
-    daysSelected.splice(indexToRemove, 1);
-}
-
 function reserve() {
     var year = document.getElementById("yearNumber").getAttribute('value');
     var month = document.getElementById("monthNumber").getAttribute('value');
@@ -88,4 +81,6 @@ function reserve() {
     }
 
     daysSelected = [];
+
+    location.reload();
 }
