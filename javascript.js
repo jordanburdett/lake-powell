@@ -71,7 +71,8 @@ function reserve() {
         , 'year': year, 'month': month, 'info': info
     }, function () {
         console.log("finished");
+        location.reload();
     });
 
-    location.reload();
+    
 }
