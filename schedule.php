@@ -209,13 +209,15 @@ try {
             echo "</div>";
             ?>
             <br>
-            <div id="infoBox" style="">
+            <div id="infoBox" style="display:none;">
                 <h3>Trip Info</h3>
-                <textarea class="form-control" id="info" column="5" ></textarea>
+                <textarea class="form-control" id="info" column="5"></textarea>
+                <br>
+
+                <button class="btn btn-primary" id="reserveButton">Reserve Dates</button>
             </div>
 
 
-            <button class="btn btn-primary" style="" id="reserveButton">Reserve Dates</button>
         </div>
 
         <div id="confirm"></div>
