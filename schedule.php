@@ -26,9 +26,10 @@ try {
 }
 
 
-
 ?>
 
+<?php
+echo '
 <!DOCTYPE html>
 <html>
 
@@ -67,7 +68,9 @@ try {
                 <li class="nav-item">
                     <a class="nav-link active" href="schedule.php">Schedule</a>
                 </li>
-            </ul>
+            </ul>'
+
+            ?>
 
             <?php
 
@@ -148,10 +151,16 @@ try {
                 }
             }
 
+            //calendar div
+            echo "<div id='calendar'>";
+
             $days = array("Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat");
 
             //display the month
-            echo "<h3 class='display-4' style='text-align:center;'> <span onclick='nextMonth(false)'><-  </span>" . $monthString . "<span onclick='nextMonth(true)'>  -></span></h3>";
+            echo "<h3 class='display-4' style='text-align:center;'> 
+                <span class='nextMonth' onclick='nextMonth(false)'><-  </span>" 
+                . $monthString . "<span onclick='nextMonth(true)' class='nextMonth'>  -></span></h3>";
+
             echo "<p>Click any green space to reserve the boat</p>";
             echo "<h3 id='monthNumber'  style='display:none;' value='" . $month . "'></h3>";
             echo "<h3 id='yearNumber'   style='display:none;' value='" . $year . "'></h3>";
@@ -214,7 +223,9 @@ try {
 
 
             echo "</div>";
-            ?>
+            
+            
+            echo '
             <br>
             <div>Green = Available</div>
             <div>red = taken</div>
@@ -231,10 +242,15 @@ try {
 
         <div id="confirm"></div>
     </div>
+    
 
 
 
+</body>';
 
-</body>
+// close calendar div
+echo "</div>";
 
-</html>
+?>
+
+</html>;

@@ -78,3 +78,18 @@ function reserve() {
     }
 
 }
+
+var offSet = 0;
+function nextMonth(value) {
+    // if its true we add a day if false we subtract a day
+    if (value) {
+        offSet++;
+    }
+    else {
+        offSet--;
+    }
+
+    $('#calendar').load('schedule.php', {'offSet' : offSet}, function() {
+        console.log("new calendar loaded with offset " + offSet);
+    })
+}

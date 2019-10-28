@@ -68,3 +68,8 @@
     height: 5em;
     border: solid black .5px;
 }
+
+.nextMonth:hover {
+    color: red;
+    cursor: pointer;
+}
