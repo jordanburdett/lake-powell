@@ -73,7 +73,9 @@ function reserve() {
             , 'year': year, 'month': month, 'info': info
         }, function () {
             console.log("finished");
-            location.reload();
+            $('#calendar').load('schedule.php', {'offSet' : offSet}, function() {
+                console.log("new calendar loaded with offset " + offSet);
+            })
         });
     }
 
