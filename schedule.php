@@ -104,7 +104,7 @@ else {
 
             $month          = date("n", mktime(0,0,0, date("n") + $offSet, date("d"), date("y")));
             $monthString    = date("F", mktime(0,0,0, date("n") + $offSet, date("d"), date("y")));
-            $year           = date("y", mktime(0,0,0, date("n") + $offSet, date("d"), date("y")));
+            $year           = date("Y", mktime(0,0,0, date("n") + $offSet, date("d"), date("y")));
             $startDayOfWeek = date("w", mktime(0,0,0, date("n") + $offSet, 1, date("y")));
             $daysInMonth    = date("t", mktime(0,0,0, date("n") + $offSet, date("d"), date("y")));
 
@@ -113,7 +113,9 @@ else {
 
             $dates = array();
             foreach ($db->query('SELECT id, day_start, day_end, year_start, year_end, user_id FROM dates
-                    WHERE month_start = ' . $month . 'ORDER BY day_start') as $row) {
+                    WHERE month_start = ' . $month . '
+                    AND year_start = ' . $year . 'ORDER BY day_start'
+                    ) as $row) {
                 array_push($dates, $row['day_start'], $row['user_id'], $row['id'], $row['day_end']);
             }
 
