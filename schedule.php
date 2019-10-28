@@ -29,46 +29,61 @@ try {
 ?>
 
 <?php
-echo '
-<!DOCTYPE html>
-<html>
 
-<head>
-    <title>Lake Powell Calendar</title>
-    <link rel="stylesheet" href="styles.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <script src="javascript.js"></script>
-</head>
+if ($_POST["offSet"] != NULL) {
+    $offSet = $_POST["offSet"];
 
-<body>
+   
 
-    <div class="bg">
-        <div class="header">
-            <h1 class="headerText">
-                House Boat Calendar
-            </h1>
+}
+else {
+    $offSet = 0;
+
+    echo '
+    <!DOCTYPE html>
+    <html>
+    
+    <head>
+        <title>Lake Powell Calendar</title>
+        <link rel="stylesheet" href="styles.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <script src="javascript.js"></script>
+    </head>
+    
+    <body>
+    
+        <div class="bg">
+            <div class="header">
+                <h1 class="headerText">
+                    House Boat Calendar
+                </h1>
+            </div>
         </div>
-    </div>
+    
+        <div class="shadow p-4 mb-4 bg-white">
+            <div class="container">
+    
+                <!-- bootstrap navbar -->
+                <ul class="nav nav-tabs nav-justified">
+                    <li class="nav-item">
+                        <a class="nav-link" href="home.php">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="info.php">Info</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="schedule.php">Schedule</a>
+                    </li>
+                </ul>';
+}
 
-    <div class="shadow p-4 mb-4 bg-white">
-        <div class="container">
 
-            <!-- bootstrap navbar -->
-            <ul class="nav nav-tabs nav-justified">
-                <li class="nav-item">
-                    <a class="nav-link" href="home.php">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="info.php">Info</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" href="schedule.php">Schedule</a>
-                </li>
-            </ul>'
+
+
 
             ?>
 
@@ -85,12 +100,7 @@ echo '
 
             //DECLARE EVERYTHING TO DO WITH DATES HERE!
 
-            if ($_POST["offSet"] != NULL) {
-                $offSet = $_POST["offSet"];
-            }
-            else {
-                $offSet = 0;
-            }
+            
 
             $month          = date("n", mktime(0,0,0, date("n") + $offSet, date("d"), date("y")));
             $monthString    = date("F", mktime(0,0,0, date("n") + $offSet, date("d"), date("y")));
