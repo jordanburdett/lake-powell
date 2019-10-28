@@ -86,7 +86,7 @@ try {
                 $offSet = $_POST["offSet"];
             }
             else {
-                $offSet = 1;
+                $offSet = 0;
             }
 
             $month          = date("n", mktime(0,0,0, date("n") + $offSet, date("d"), date("y")));
@@ -151,7 +151,7 @@ try {
             $days = array("Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat");
 
             //display the month
-            echo "<h3 class='display-4' style='text-align:center;'>" . $monthString . "</h3>";
+            echo "<h3 class='display-4' style='text-align:center;'> <-" . $monthString . " -> </h3>";
             echo "<p>Click any green space to reserve the boat</p>";
             echo "<h3 id='monthNumber'  style='display:none;' value='" . $month . "'></h3>";
             echo "<h3 id='yearNumber'   style='display:none;' value='" . $year . "'></h3>";
