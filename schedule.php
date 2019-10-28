@@ -81,15 +81,14 @@ try {
 
 
             //first things first lets find the offset
-            $dayOfWeek = date('w');
-            // FOR CURRENT DAY DATE('j');
-            for ($current_day = date('j'); $current_day != 1; $current_day--) {
-                if ($dayOfWeek == 0) {
-                    $dayOfWeek = 6;
-                } else {
-                    $dayOfWeek--;
-                }
+            if ($_POST["offSet"] != NULL) {
+                $offSet = $_POST["offSet"];
             }
+            else {
+                $offSet = 0;
+            }
+            
+            $startDayOfWeek = date("w", mktime(0,0,0, date("m") + $offSet, 1, date("y")));
 
             // query the info for current month || end month && current year || end year
             // day_start, day_end, dateId || if day start = null its a carry over from previous month or year
@@ -172,7 +171,7 @@ try {
                     echo "</div><div class='row'>";
                 }
 
-                if ($i >= ($dayOfWeek) && $i < date('t') + $dayOfWeek) {
+                if ($i >= ($startDayOfWeek) && $i < date('t') + $startDayOfWeek) {
 
                     // the actual day
                     if ($datesArray[$indexOfDates]->isAvaliable) {
