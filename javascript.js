@@ -75,6 +75,7 @@ function reserve() {
             console.log("finished");
             $('#calendar').load('schedule.php', {'offSet' : offSet}, function() {
                 console.log("new calendar loaded with offset " + offSet);
+                daysSelected = [];
             })
         });
     }
@@ -94,4 +95,6 @@ function nextMonth(value) {
     $('#calendar').load('schedule.php', {'offSet' : offSet}, function() {
         console.log("new calendar loaded with offset " + offSet);
     })
+
+    daysSelected = [];
 }
