@@ -86,7 +86,7 @@ try {
                 $offSet = $_POST["offSet"];
             }
             else {
-                $offSet = 0;
+                $offSet = 1;
             }
 
             $month          = date("n", mktime(0,0,0, date("n") + $offSet, date("d"), date("y")));
