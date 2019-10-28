@@ -80,22 +80,27 @@ try {
             }
 
 
-            //first things first lets find the offset
+            //DECLARE EVERYTHING TO DO WITH DATES HERE!
+
             if ($_POST["offSet"] != NULL) {
                 $offSet = $_POST["offSet"];
             }
             else {
                 $offSet = 0;
             }
-            
-            $startDayOfWeek = date("w", mktime(0,0,0, date("m") + $offSet, 1, date("y")));
+
+            $month          = date("n", mktime(0,0,0, date("n") + $offSet, date("d"), date("y")));
+            $monthString    = date("F", mktime(0,0,0, date("n") + $offSet, date("d"), date("y")));
+            $year           = date("y", mktime(0,0,0, date("n") + $offSet, date("d"), date("y")));
+            $startDayOfWeek = date("w", mktime(0,0,0, date("n") + $offSet, 1, date("y")));
+            $daysInMonth    = date("t", mktime(0,0,0, date("n") + $offSet, date("d"), date("y")));
 
             // query the info for current month || end month && current year || end year
             // day_start, day_end, dateId || if day start = null its a carry over from previous month or year
 
             $dates = array();
             foreach ($db->query('SELECT id, day_start, day_end, year_start, year_end, user_id FROM dates
-                    WHERE month_start = ' . date('n') . 'ORDER BY day_start') as $row) {
+                    WHERE month_start = ' . $month . 'ORDER BY day_start') as $row) {
                 array_push($dates, $row['day_start'], $row['user_id'], $row['id'], $row['day_end']);
             }
 
@@ -146,10 +151,10 @@ try {
             $days = array("Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat");
 
             //display the month
-            echo "<h3 class='display-4' style='text-align:center;'>" . date('F') . "</h3>";
+            echo "<h3 class='display-4' style='text-align:center;'>" . $monthString . "</h3>";
             echo "<p>Click any green space to reserve the boat</p>";
-            echo "<h3 id='monthNumber'  style='display:none;' value='" . date('n') . "'></h3>";
-            echo "<h3 id='yearNumber'   style='display:none;' value='" . date('Y') . "'></h3>";
+            echo "<h3 id='monthNumber'  style='display:none;' value='" . $month . "'></h3>";
+            echo "<h3 id='yearNumber'   style='display:none;' value='" . $year . "'></h3>";
             echo "<div class='row' style='border:solid black;'>";
            
             //create the header of days
@@ -171,7 +176,7 @@ try {
                     echo "</div><div class='row'>";
                 }
 
-                if ($i >= ($startDayOfWeek) && $i < date('t') + $startDayOfWeek) {
+                if ($i >= ($startDayOfWeek) && $i < $daysInMonth + $startDayOfWeek) {
 
                     // the actual day
                     if ($datesArray[$indexOfDates]->isAvaliable) {
