@@ -3,7 +3,7 @@ session_start();
 
 if ($_SESSION['loggedIn'] != true) {
     echo "You do not have access";
-    header("location: login.php");
+    header("location: loginPage.php");
     die();
 }
 
