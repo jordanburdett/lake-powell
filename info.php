@@ -66,23 +66,31 @@ if (!$_SESSION['loggedIn']) {
                 </li>
             </ul>
 
-            <?php
-            foreach ($db->query('SELECT first_name, month_start, month_end, day_start, day_end, year_start, year_end, info FROM user_profile AS u
-                    JOIN dates AS n
-                    ON u.id = n.user_id
-                    FULL OUTER JOIN note AS d
-                    ON d.date_id = n.id') as $row) {
-                echo '<p>' . $row['first_name'] . "'s date: "
-                    . $row['month_start'] . ", " . $row['day_start'] . ", " . $row['year_start']
-                    . " - " . $row['month_end'] . ", " . $row['day_end'] . ", " . $row['year_end'];
+            <div class="row">
+                <div class="col-md-6">
+                    <h3>Your Dates</h3>
+                    <?php
 
-                    
-                    if ($row['info']) {
-                        echo " - " . $row['info'];
+                    $user_id = $_SESSION['user_id'];
+                    foreach ($db->query("SELECT month_start, month_end, day_start, day_end, year_start, year_end, info FROM dates
+            FULL OUTER JOIN note 
+            ON note.date_id = dates.id
+            WHERE dates.user_id = $user_id ORDER BY year_start, month_start, day_start") as $row) {
+
+                        $monthStart = $row['month_start'];
+                        $monthEnd = $row['month_end'];
+                        $dayStart = $row['day_start'];
+                        $dayEnd = $row['day_end'];
+                        $yearStart = $row['year_start'];
+                        $yearEnd = $row['year_end'];
+                        $info = $row['info'];
+
+                        echo "<p>$monthStart/$dayStart/$yearStart - $monthEnd/$dayEnd/$yearEnd $info</p>";
                     }
-                    echo "</p>";
-            }
-            ?>
+
+                    ?>
+                </div>
+            </div>
         </div>
     </div>
 

@@ -58,3 +58,8 @@ ON n.id = d.date_id;
 
 SELECT first_name, last_name FROM user_profile as u, dates as d
 WHERE u.id = d.user_id AND d.id = 3;
+
+SELECT month_start, month_end, day_start, day_end, year_start, year_end, info FROM dates
+FULL OUTER JOIN note 
+ON note.date_id = dates.id
+WHERE dates.user_id = 1 ORDER BY year_start, month_start, day_start;
