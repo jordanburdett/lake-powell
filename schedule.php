@@ -172,7 +172,7 @@ else {
             //display the month
             echo "<h3 class='display-4' style='text-align:center;'> 
                 <span class='nextMonth' onclick='nextMonth(false)'><-  </span>" 
-                . $monthString . " - $year<span onclick='nextMonth(true)' class='nextMonth'>  -></span></h3>";
+                . $monthString . " $year<span onclick='nextMonth(true)' class='nextMonth'>  -></span></h3>";
 
             echo "<p>Click any green space to reserve the boat</p>";
             echo "<h3 id='monthNumber'  style='display:none;' value='" . $month . "'></h3>";

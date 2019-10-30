@@ -23,6 +23,11 @@ catch (PDOException $ex)
   die();
 }
 
+if (!$_SESSION['loggedIn']) {
+  echo "You do not have access";
+  header("location: loginPage.php");
+  die();
+}
 
 
 $dayStart = $_POST['dayStart'];
