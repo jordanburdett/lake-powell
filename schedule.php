@@ -59,7 +59,7 @@ else {
         <div class="bg">
             <div class="header">
                 <h1 class="headerText">
-                    House Boat Calendar
+                    Houseboat Calendar
                 </h1>
             </div>
         </div>

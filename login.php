@@ -84,7 +84,7 @@ else
         <a class='nav-link' href='schedule.php'>Schedule</a>
     </li>
     </ul>";
-    echo "<h4 style='text-align:center; padding: 20px;'>Welcome " . $first_name . " " . $last_name . " you are now logged in $user_id</h4>";
+    echo "<h4 style='text-align:center; padding: 20px;'>Welcome " . $first_name . " " . $last_name . " you are now logged in</h4>";
     
 
     $_SESSION['loggedIn']   = true;

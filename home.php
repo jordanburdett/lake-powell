@@ -46,6 +46,11 @@ if ($_SESSION['loggedIn'] != null) {
                 echo "<a href='loginPage.php' class='btn btn-primary' id='login_here'>Login Here</a>";
             }
             ?>
+            <?php
+            if ($loggedIn) {
+                echo "<button class='btn btn-danger' onclick='logout()'>Logout</button>";
+            }
+            ?>
 
 
         </div>
@@ -74,30 +79,94 @@ if ($_SESSION['loggedIn'] != null) {
                 }
                 ?>
             </ul>
+            <br>
+            <div class="row">
+                <div class="col-md-5">
+
+                    <div class="thumbnail">
+                        <a href="\images\sumrrain.png" target="_blank">
+                            <img src="\images\sumrrain.png" alt="Sum-R-Rain Houseboat" style="width:100%">
+                        </a>
+                        <div class="caption">
+                            <br>
+
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-md-7">
+
+                    <h2>About</h2>
+                    <br>
+
+                    <p>The Sum-R-Rain houseboat is owned by the Shareholders of the Navajo Rainbow Corporation.</p>
+                    <p>The boat is moored at Bullfrog Marina in the Covered slips. <br>Slip #P-17.</p>
+                    <p>The houseboat is 66’ long and 16’ wide</p>
+                </div>
+            </div>
+
+            <br>
 
             <div class="row">
-                <div class="col">
-                    <h2 class="smallHeader">col1</h2>
+                <div class="col-md-6">
+                    <div class="thumbnail">
+                        <a href="/images/rainbowbridge.jpg" target="_blank">
+                            <img src="/images/rainbowbridge.jpg" alt="Rainbow Bridge" style="width:100%">
+                        </a>
+                        <div class="caption" style="text-align:center;">
+                            <p>Rainbow Bridge in Lake Powell</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="col">
-                    <h2 class="smallHeader">col2</h2>
+                <div class="col-md-6">
+                    <div class="thumbnail">
+                        <a href="/images/lakepowellCanyon.jpg" target="_blank">
+                            <img src="/images/lakepowellCanyon.jpg" alt="Canyon at lake powell" style="width:100%">
+                        </a>
+                        <div class="caption" style="text-align:center;">
+                            <p>Reflection Canyon Lake Powell</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
+
     <div class="shadow p-4 mb-4 bg-whitesmoke">
         <div class="container">
-            <div class="display-4" style="text-align:center;">
-                Pictures
+            <div id="pictures" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#pictures" data-slide-to="0" class="active"></li>
+                    <li data-target="#pictures" data-slide-to="1"></li>
+                    <li data-target="#pictures" data-slide-to="2"></li>
+                </ol>
+
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <img src="/images/antelopeCanyon.jpg" alt="Antelope Canyon" width="1100" height="500">
+                    </div>
+
+                    <div class="item">
+                        <img src="/images/sunset.jpg" alt="Lake Powell Sunset" width="1100" height="500">
+                    </div>
+
+                    <div class="item">
+                        <img src="/images/horseshoeBend.jpg" alt="Horse Shoe Bend Lake Powell" width="1100" height="500">
+                    </div>
+                </div>
+
+                <!-- Left and right controls -->
+                <a class="carousel-control-prev" href="#pictures" data-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </a>
+                <a class="carousel-control-next" href="#pictures" data-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </a>
+
             </div>
-
-            <?php
-            if ($loggedIn) {
-             echo "<button class='btn btn-danger' onclick='logout()'>Logout</button>";
-            }
-
-            ?>
         </div>
     </div>
 
