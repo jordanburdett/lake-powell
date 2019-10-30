@@ -59,10 +59,10 @@ if (!$_SESSION['loggedIn']) {
                     <a class="nav-link" href="home.php">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" href="info.php">Info</a>
+                    <a class="nav-link active" href="info.php">Account Info</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="schedule.php">Link 3</a>
+                    <a class="nav-link" href="schedule.php">Schedule</a>
                 </li>
             </ul>
 
@@ -94,8 +94,11 @@ if (!$_SESSION['loggedIn']) {
                 <div class="col-md-6">
                     <h3>Your info</h3>
                     <?php
-
-                    echo "<p>$_SESSION['firstname']</p>";
+                    $firstname =  $_SESSION ['firstname'];
+                    $lastname  =  $_SESSION ['lastname'];
+                    $username  =  $_username['username'];
+                    echo "<p>Firstname: $firstname Lastname: $lastname</p>";
+                    echo "<p>Username: $username";
 
                     ?>
                 </div>
