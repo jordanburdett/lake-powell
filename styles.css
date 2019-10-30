@@ -62,6 +62,10 @@
     border: solid black .5px;
 }
 
+#avaliable:hover {
+    cursor: pointer;
+}
+
 #selected, .selected {
     background-color: rgb(255, 143, 68);
     color: white;
