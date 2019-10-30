@@ -70,7 +70,7 @@ if (!$_SESSION['loggedIn']) {
             <?php
             $dateId = $_GET['dateId'];
 
-            $statement = $db->prepare("SELECT month_start, month_end, day_start, day_end, year_start, year_end, info, user_id FROM dates
+            $statement = $db->prepare("SELECT month_start, month_end, day_start, day_end, year_start, year_end, info, dates.user_id FROM dates
             FULL OUTER JOIN note 
             ON note.date_id = dates.id
             WHERE dates.id = $dateId ORDER BY year_start, month_start, day_start;");
