@@ -150,7 +150,7 @@ if ($_SESSION['loggedIn'] != null) {
                         <img src="images/antelopeCanyon.jpg" alt="Antelope Canyon Lake Powell" width="1100" height="500">
                     </div>
                     <div class="carousel-item">
-                        <img src="images/horseShoeBend.jpg" alt="Horse Shoe Bend Lake Powell" width="1100" height="500">
+                        <img src="images/horseshoeBend.jpg" alt="Horse Shoe Bend Lake Powell" width="1100" height="500">
                     </div>
                     <div class="carousel-item">
                         <img src="images/sunset.jpg" alt="Sunset Lake Powell" width="1100" height="500">
