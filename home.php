@@ -136,25 +136,24 @@ if ($_SESSION['loggedIn'] != null) {
     <div class="shadow p-4 mb-4 bg-whitesmoke">
         <div class="container">
             <div id="pictures" class="carousel slide" data-ride="carousel">
+
                 <!-- Indicators -->
-                <ol class="carousel-indicators">
+                <ul class="carousel-indicators">
                     <li data-target="#pictures" data-slide-to="0" class="active"></li>
                     <li data-target="#pictures" data-slide-to="1"></li>
                     <li data-target="#pictures" data-slide-to="2"></li>
-                </ol>
+                </ul>
 
-                <!-- Wrapper for slides -->
+                <!-- The slideshow -->
                 <div class="carousel-inner">
-                    <div class="item active">
-                        <img src="/images/antelopeCanyon.jpg" alt="Antelope Canyon" width="1100" height="500">
+                    <div class="carousel-item active">
+                        <img src="images/antelopeCanyon.jpg" alt="Antelope Canyon Lake Powell" width="1100" height="500">
                     </div>
-
-                    <div class="item">
-                        <img src="/images/sunset.jpg" alt="Lake Powell Sunset" width="1100" height="500">
+                    <div class="carousel-item">
+                        <img src="images/horseShoeBend.jpg" alt="Horse Shoe Bend Lake Powell" width="1100" height="500">
                     </div>
-
-                    <div class="item">
-                        <img src="/images/horseshoeBend.jpg" alt="Horse Shoe Bend Lake Powell" width="1100" height="500">
+                    <div class="carousel-item">
+                        <img src="images/sunset.jpg" alt="Sunset Lake Powell" width="1100" height="500">
                     </div>
                 </div>
 
@@ -165,7 +164,6 @@ if ($_SESSION['loggedIn'] != null) {
                 <a class="carousel-control-next" href="#pictures" data-slide="next">
                     <span class="carousel-control-next-icon"></span>
                 </a>
-
             </div>
         </div>
     </div>
