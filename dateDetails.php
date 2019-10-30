@@ -70,7 +70,7 @@ if (!$_SESSION['loggedIn']) {
             <?php
             $dateId = $_GET['dateId'];
 
-            $statement = $db->prepare("SELECT month_start, month_end, day_start, day_end, year_start, year_end, info FROM dates
+            $statement = $db->prepare("SELECT month_start, month_end, day_start, day_end, year_start, year_end, info, user_id FROM dates
             FULL OUTER JOIN note 
             ON note.date_id = dates.id
             WHERE dates.id = $dateId ORDER BY year_start, month_start, day_start;");
@@ -85,7 +85,17 @@ if (!$_SESSION['loggedIn']) {
             $yearStart = $row['year_start'];
             $yearEnd = $row['year_end'];
             $info = $row['info'];
+            $userId = $row['user_id'];
 
+
+
+            $statement = $db->prepare("SELECT first_name, last_name FROM user_profile");
+            $statement->execute();
+            $row = $statement->fetch(PDO::FETCH_ASSOC);
+            $firstname = $row['first_name'];
+            $lastname = $row['last_name'];
+
+            echo "<h3>Date reserved to $firstname, $lastname</h3>";
             echo "<p>$monthStart/$dayStart/$yearStart - $monthEnd/$dayEnd/$yearEnd $info</p>";
 
             ?>
