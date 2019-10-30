@@ -89,7 +89,7 @@ if (!$_SESSION['loggedIn']) {
 
 
 
-            $statement = $db->prepare("SELECT first_name, last_name FROM user_profile");
+            $statement = $db->prepare("SELECT first_name, last_name FROM user_profile WHERE id = $userId");
             $statement->execute();
             $row = $statement->fetch(PDO::FETCH_ASSOC);
             $firstname = $row['first_name'];
