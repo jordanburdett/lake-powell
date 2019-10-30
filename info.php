@@ -45,7 +45,7 @@ if (!$_SESSION['loggedIn']) {
     <div class="bg">
         <div class="header">
             <h1 class="headerText">
-                House Boat info
+                Houseboat info
             </h1>
         </div>
     </div>
@@ -65,7 +65,7 @@ if (!$_SESSION['loggedIn']) {
                     <a class="nav-link" href="schedule.php">Schedule</a>
                 </li>
             </ul>
-
+            <br>
             <div class="row">
                 <div class="col-md-6">
                     <h3>Your Dates</h3>
@@ -97,8 +97,8 @@ if (!$_SESSION['loggedIn']) {
                     $firstname =  $_SESSION['first_name'];
                     $lastname  =  $_SESSION['last_name'];
                     $username  =  $_SESSION['username'];
-                    echo "<p>Firstname: $firstname Lastname: $lastname</p>";
-                    echo "<p>Username: $username";
+                    echo "<p>Firstname: $firstname <br>Lastname: $lastname</p>";
+                    echo "<p>Username: $username</p>";
 
                     ?>
                 </div>
