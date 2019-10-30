@@ -69,6 +69,7 @@ if (!$_SESSION['loggedIn']) {
             <div class="row">
                 <div class="col-md-6">
                     <h3>Your Dates</h3>
+                    <br>
                     <?php
 
                     $user_id = $_SESSION['user_id'];
@@ -93,12 +94,12 @@ if (!$_SESSION['loggedIn']) {
 
                 <div class="col-md-6">
                     <h3>Your info</h3>
+                    <br>
                     <?php
                     $firstname =  $_SESSION['first_name'];
                     $lastname  =  $_SESSION['last_name'];
                     $username  =  $_SESSION['username'];
-                    echo "<p>Firstname: $firstname <br>Lastname: $lastname</p>";
-                    echo "<p>Username: $username</p>";
+                    echo "<p>Firstname: $firstname <br>Lastname: $lastname<br>Username: $username</p>";
 
                     ?>
                 </div>

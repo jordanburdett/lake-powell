@@ -95,7 +95,7 @@ if (!$_SESSION['loggedIn']) {
             $firstname = $row['first_name'];
             $lastname = $row['last_name'];
 
-            echo "<h3>Date reserved to $firstname, $lastname</h3>";
+            echo "<h3>Date reserved to $firstname $lastname</h3>";
             echo "<p>$monthStart/$dayStart/$yearStart - $monthEnd/$dayEnd/$yearEnd $info</p>";
 
             ?>
