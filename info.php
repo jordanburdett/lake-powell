@@ -90,6 +90,15 @@ if (!$_SESSION['loggedIn']) {
 
                     ?>
                 </div>
+
+                <div class="col-md-6">
+                    <h3>Your info</h3>
+                    <?php
+
+                    echo "<p>$_SESSION['firstname']</p>"
+
+                    ?>
+                </div>
             </div>
         </div>
     </div>
