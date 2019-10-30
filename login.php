@@ -64,7 +64,7 @@ if ($first_name == "") {
                 <input type='password' name='password' class='form-control' id='password'>
             </div>
 
-            <button type='submit' class='btn btn-primary' onclick='login()'>Login</button>
+            <button class='btn btn-primary' onclick='login()'>Login</button>
         </form>
     </div>
 
