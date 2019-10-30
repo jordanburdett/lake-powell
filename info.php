@@ -95,7 +95,7 @@ if (!$_SESSION['loggedIn']) {
                     <h3>Your info</h3>
                     <?php
 
-                    echo "<p>$_SESSION['firstname']</p>"
+                    echo "<p>$_SESSION['firstname']</p>";
 
                     ?>
                 </div>
