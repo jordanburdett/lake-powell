@@ -71,7 +71,7 @@ if ($_SESSION['loggedIn'] != null) {
 
                     echo "
                 <li class='nav-item'>
-                    <a class='nav-link' href='info.php'>Info</a>
+                    <a class='nav-link' href='info.php'>Account Info</a>
                 </li>
                 <li class='nav-item'>
                     <a class='nav-link' href='schedule.php'>Schedule</a>
