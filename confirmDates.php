@@ -32,8 +32,6 @@ $month = $_POST['month'];
 $user_id = $_SESSION['user_id'];
 $info = $_POST['info'];
 
-echo "$dayStart, $dayEnd, $year, $month, $user_id, $info";
-
 $statement = $db->prepare("INSERT INTO dates(user_id, month_start, month_end, day_start, day_end, year_start, year_end)
 VALUES ('$user_id', '$month', '$month', '$dayStart', '$dayEnd', '$year', '$year')");
 
