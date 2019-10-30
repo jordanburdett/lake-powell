@@ -94,9 +94,9 @@ if (!$_SESSION['loggedIn']) {
                 <div class="col-md-6">
                     <h3>Your info</h3>
                     <?php
-                    $firstname =  $_SESSION ['firstname'];
-                    $lastname  =  $_SESSION ['lastname'];
-                    $username  =  $_username['username'];
+                    $firstname =  $_SESSION['first_name'];
+                    $lastname  =  $_SESSION['last_name'];
+                    $username  =  $_SESSION['username'];
                     echo "<p>Firstname: $firstname Lastname: $lastname</p>";
                     echo "<p>Username: $username";
 
