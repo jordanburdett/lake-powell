@@ -100,14 +100,14 @@ else {
 
 
             //DECLARE EVERYTHING TO DO WITH DATES HERE!
-
+           
             
 
-            $month          = date("n", mktime(6,6,6, date("n") + $offSet, date("d"), date("y")));
-            $monthString    = date("F", mktime(6,6,6, date("n") + $offSet, date("d"), date("y")));
-            $year           = date("Y", mktime(6,6,6, date("n") + $offSet, date("d"), date("y")));
+            $month          = date("n", mktime(6,6,6, date("n") + $offSet, 1, date("y")));
+            $monthString    = date("F", mktime(6,6,6, date("n") + $offSet, 1, date("y")));
+            $year           = date("Y", mktime(6,6,6, date("n") + $offSet, 1, date("y")));
             $startDayOfWeek = date("w", mktime(6,6,6, date("n") + $offSet, 1, date("y")));
-            $daysInMonth    = date("t", mktime(6,6,6, date("n") + $offSet, date("d"), date("y")));
+            $daysInMonth    = date("t", mktime(6,6,6, date("n") + $offSet, 1, date("y")));
             echo "offset= $offSet<br>";
             echo "month= $month<br>";
             echo "monthString= $monthString<br>";
