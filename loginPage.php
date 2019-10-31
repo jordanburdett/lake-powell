@@ -61,7 +61,7 @@ if ($_SESSION['loggedIn']) {
                             <input type="password" name="password" class="form-control" id="password">
                         </div>
 
-                        <button type="button" class="btn btn-primary" onclick="login()">Login</button>
+                        <input type="button" class="btn btn-primary" onsubmit="login()">Login</button>
                     </form>
                 </div>
 
