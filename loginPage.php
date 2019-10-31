@@ -51,14 +51,14 @@ if ($_SESSION['loggedIn']) {
                 <div class="col">
                     <h2 class="smallHeader">Login</h2>
 
-                    <form name="loginForm" id="loginForm" onSubmit="login()">
+                    <form name="loginForm" id="loginForm" action="login.php" method="post">
                         <div class="form-group">
                             <label for="username">Username:</label>
                             <input type="txt" class="form-control" id="username" name="username">
                         </div>
                         <div class="form-group">
                             <label for="password">Password:</label>
-                            <input type="password" name="password" class="form-control" id="password" onchange="enterCheck()">
+                            <input type="password" name="password" class="form-control" id="password">
                         </div>
 
                         <input type="submit" class="btn btn-primary" value="Login">
