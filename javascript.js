@@ -41,6 +41,7 @@ function selectDay(day) {
         }
     }
     daysSelected.sort();
+    console.log(daysSelected);
 }
 
 function removeSelected(day) {
