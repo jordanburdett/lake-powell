@@ -51,17 +51,17 @@ if ($_SESSION['loggedIn']) {
                 <div class="col">
                     <h2 class="smallHeader">Login</h2>
 
-                    <form name="loginForm" id="loginForm">
+                    <form name="loginForm" id="loginForm" onSubmit="login()">
                         <div class="form-group">
                             <label for="username">Username:</label>
                             <input type="txt" class="form-control" id="username" name="username">
                         </div>
                         <div class="form-group">
                             <label for="password">Password:</label>
-                            <input type="password" name="password" class="form-control" id="password">
+                            <input type="password" name="password" class="form-control" id="password" onchange="enterCheck()">
                         </div>
 
-                        <button type="button" class="btn btn-primary" onsubmit="login()">Login</button>
+                        <input type="submit" class="btn btn-primary" value="Login">
                     </form>
                 </div>
 
