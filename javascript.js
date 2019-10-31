@@ -68,6 +68,8 @@ function reserve() {
 
     if (info != "") {
 
+        daysSelected.sort();
+        console.log(daysSelected);
         $('#confirm').load('confirmDates.php', {
             'dayStart': daysSelected[0], 'dayEnd': daysSelected[daysSelected.length - 1]
             , 'year': year, 'month': month, 'info': info
