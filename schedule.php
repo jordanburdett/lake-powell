@@ -109,6 +109,12 @@ else {
             $startDayOfWeek = date("w", mktime(0,0,0, date("n") + $offSet, 1, date("y")));
             $daysInMonth    = date("t", mktime(0,0,0, date("n") + $offSet, date("d"), date("y")));
 
+            echo "month= $month<br>";
+            echo "monthString= $monthString<br>";
+            echo "year= $year<br>";
+            echo "startDayOfWeek= $startDayOfWeek<br>";
+            echo "daysInMonth= $daysInMonth<br>"
+
             // query the info for current month || end month && current year || end year
             // day_start, day_end, dateId || if day start = null its a carry over from previous month or year
 
