@@ -108,7 +108,7 @@ else {
             $year           = date("Y", mktime(6,6,6, date("n") + $offSet, date("d"), date("y")));
             $startDayOfWeek = date("w", mktime(6,6,6, date("n") + $offSet, 1, date("y")));
             $daysInMonth    = date("t", mktime(6,6,6, date("n") + $offSet, date("d"), date("y")));
-
+            echo "offset= $offSet<br>";
             echo "month= $month<br>";
             echo "monthString= $monthString<br>";
             echo "year= $year<br>";
