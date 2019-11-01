@@ -40,8 +40,14 @@ function selectDay(day) {
             daysSelected.push(day);
         }
     }
-    daysSelected.sort();
+    daysSelected.sort(sorter);
     console.log(daysSelected);
+}
+
+function sorter(a, b) {
+    if (a < b) return -1;
+    if (a > b) return 1;
+    return 0;
 }
 
 function removeSelected(day) {
