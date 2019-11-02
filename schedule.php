@@ -223,7 +223,7 @@ else {
                             $lastName = $row['last_name'];
                         }
 
-                        echo "<div class='col' id='taken'>" . $datesArray[$indexOfDates]->number . "<a href='dateDetails.php?dateId=$dateId' style='color:black;'><br>$firstName</a></div>";
+                        echo "<div class='col' id='taken' onClick='location.href='dateDetails.php?dateId=$dateId'>" . $datesArray[$indexOfDates]->number . "<a href='dateDetails.php?dateId=$dateId' style='color:black;' id='nameHide'><br>$firstName</a></div>";
                     }
 
                     $indexOfDates++;
