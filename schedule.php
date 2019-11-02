@@ -229,7 +229,7 @@ else {
                     $indexOfDates++;
                 } else {
                     // place holder not actual days
-                    echo "<div class='col' style='border:solid black .5px;'></div>";
+                    echo "<div class='col-xs' style='border:solid black .5px;'></div>";
                 }
             }
 
