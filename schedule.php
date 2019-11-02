@@ -178,16 +178,16 @@ else {
             echo "<p>Click any green space to reserve the boat</p>";
             echo "<h3 id='monthNumber'  style='display:none;' value='" . $month . "'></h3>";
             echo "<h3 id='yearNumber'   style='display:none;' value='" . $year . "'></h3>";
-            echo "<div class='row' style='border:solid black;'>";
+            echo "<div class='row flex-nowrap' style='border:solid black;'>";
            
             //create the header of days
             for ($i = 0; $i < 7; $i++) {
-                echo "<div class='col-*' style='text-align:center;'>" . $days[$i] . "</div>";
+                echo "<div class='col' style='text-align:center;'>" . $days[$i] . "</div>";
             }
             echo "</div>";
 
             //create the days
-            echo "<div class='row'>";
+            echo "<div class='row flex-nowrap'>";
 
 
             $indexOfDates = 0;
@@ -196,14 +196,14 @@ else {
                 //wrap every 7 days
                 if ($i % 7 == 0) {
 
-                    echo "</div><div class='row'>";
+                    echo "</div><div class='row flex-nowrap'>";
                 }
 
                 if ($i >= ($startDayOfWeek) && $i < $daysInMonth + $startDayOfWeek) {
 
                     // the actual day
                     if ($datesArray[$indexOfDates]->isAvaliable) {
-                        echo "<div class='col-*' id='avaliable' name='date" . $datesArray[$indexOfDates]->number . "'  onclick='selectDay(" . $datesArray[$indexOfDates]->number . ")'>"
+                        echo "<div class='col' id='avaliable' name='date" . $datesArray[$indexOfDates]->number . "'  onclick='selectDay(" . $datesArray[$indexOfDates]->number . ")'>"
                             . $datesArray[$indexOfDates]->number . "</div>";
                     } else {
 
@@ -223,13 +223,13 @@ else {
                             $lastName = $row['last_name'];
                         }
 
-                        echo "<div class='col-*' id='taken'>" . $datesArray[$indexOfDates]->number . "<a href='dateDetails.php?dateId=$dateId' style='color:black;'><p>$firstName $lastName</p></a></div>";
+                        echo "<div class='col' id='taken'>" . $datesArray[$indexOfDates]->number . "<a href='dateDetails.php?dateId=$dateId' style='color:black;'><p>$firstName $lastName</p></a></div>";
                     }
 
                     $indexOfDates++;
                 } else {
                     // place holder not actual days
-                    echo "<div class='col-*' style='border:solid black .5px;'></div>";
+                    echo "<div class='col' style='border:solid black .5px;'></div>";
                 }
             }
 
