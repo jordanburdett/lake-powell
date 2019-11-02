@@ -182,7 +182,7 @@ else {
            
             //create the header of days
             for ($i = 0; $i < 7; $i++) {
-                echo "<div class='col' style='text-align:center;'>" . $days[$i] . "</div>";
+                echo "<div class='col-xs' style='text-align:center;'>" . $days[$i] . "</div>";
             }
             echo "</div>";
 
