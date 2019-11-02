@@ -203,7 +203,7 @@ else {
 
                     // the actual day
                     if ($datesArray[$indexOfDates]->isAvaliable) {
-                        echo "<div class='col-xs-*' id='avaliable' name='date" . $datesArray[$indexOfDates]->number . "'  onclick='selectDay(" . $datesArray[$indexOfDates]->number . ")'>"
+                        echo "<div class='col-xs' id='avaliable' name='date" . $datesArray[$indexOfDates]->number . "'  onclick='selectDay(" . $datesArray[$indexOfDates]->number . ")'>"
                             . $datesArray[$indexOfDates]->number . "</div>";
                     } else {
 
@@ -223,7 +223,7 @@ else {
                             $lastName = $row['last_name'];
                         }
 
-                        echo "<div class='col-xs-*' id='taken'>" . $datesArray[$indexOfDates]->number . "<a href='dateDetails.php?dateId=$dateId' style='color:black;'><p>$firstName $lastName</p></a></div>";
+                        echo "<div class='col-xs' id='taken'>" . $datesArray[$indexOfDates]->number . "<a href='dateDetails.php?dateId=$dateId' style='color:black;'><p>$firstName $lastName</p></a></div>";
                     }
 
                     $indexOfDates++;
